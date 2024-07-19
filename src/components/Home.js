@@ -16,10 +16,7 @@ const Div = styled.div`
 function Home() {
   return (
     <Div>
-      <img
-        src="/assets/home/soulart_station_cropped.png"
-        alt="soulart station"
-      ></img>
+      <img src="/assets/home/dark.jpg" alt="soulart station"></img>
     </Div>
   );
 }
