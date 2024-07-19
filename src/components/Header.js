@@ -6,7 +6,11 @@ function Header() {
           src="/assets/logo.png"
           width="100px"
           alt="company logo"
-          style={{ "margin-left": "20px", marginRight: "10px" }}
+          style={{
+            marginLeft: "20px",
+            marginRight: "10px",
+            border: "1px solid black",
+          }}
         ></img>
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

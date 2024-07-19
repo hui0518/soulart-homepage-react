@@ -43,7 +43,7 @@ function Partners() {
   return (
     <div style={{ display: "flex", flexFlow: "row" }}>
       {partners.map(({ name, image }) => (
-        <Partner name={name} image={image} />
+        <Partner name={name} image={image} key={name} />
       ))}
     </div>
   );

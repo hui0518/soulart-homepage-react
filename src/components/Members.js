@@ -43,7 +43,7 @@ function Members() {
   return (
     <div style={{ display: "flex", flexFlow: "row" }}>
       {members.map(({ name, image }) => (
-        <Member name={name} image={image} />
+        <Member name={name} image={image} key={name} />
       ))}
     </div>
   );
