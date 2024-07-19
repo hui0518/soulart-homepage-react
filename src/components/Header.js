@@ -2,6 +2,12 @@ function Header() {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
+        <img
+          src="/assets/logo.png"
+          width="100px"
+          alt="company logo"
+          style={{ "margin-left": "20px", marginRight: "10px" }}
+        ></img>
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -24,51 +30,47 @@ function Header() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Item 1</a>
+              <a>Home</a>
             </li>
             <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
+              <a>About</a>
             </li>
             <li>
-              <a>Item 3</a>
+              <a>Members</a>
+            </li>
+            <li>
+              <a>Partners</a>
+            </li>
+            <li>
+              <a>Buy</a>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul
+          className="menu menu-horizontal px-1"
+          style={{ fontFamily: "Arvo", fontSize: "20px", fontWeight: "400" }}
+        >
           <li>
-            <a>Item 1</a>
+            <a>Home</a>
           </li>
           <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
+            <a>About</a>
           </li>
           <li>
-            <a>Item 3</a>
+            <a>Members</a>
+          </li>
+          <li>
+            <a>Partners</a>
+          </li>
+          <li>
+            <a>Buy</a>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn">Lang</a>
       </div>
     </div>
   );
