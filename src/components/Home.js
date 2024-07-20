@@ -3,17 +3,15 @@ import styled from "styled-components";
 
 const Div = styled.div`
   width: 100%;
+  height: 100vh;
 
   display: flex;
   flex-flow: column;
   align-items: center;
 
-  height: 100vh;
-
   .image {
     width: 90%;
     height: 80%;
-    object-fit: cover;
     border-radius: 20px;
     display: block;
 
@@ -29,10 +27,6 @@ const Div = styled.div`
   }
 
   #mainText {
-    transition-property: scale;
-    transition-duration: 0.75s;
-    transition-timing-function: ease-in-out;
-
     font-family: Arvo, sans-serif;
     font-weight: 400;
     position: absolute;
@@ -52,42 +46,39 @@ function Home() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const mainText = document.getElementById("mainText");
+    window.addEventListener("scroll", () => setScrolled(window.scrollY > 10));
+
     const homeImage = document.getElementById("homeImage");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-        mainText.style.scale = "0.8";
-      } else {
-        setScrolled(false);
-        mainText.style.scale = "1";
-      }
-    });
-
-    homeImage.addEventListener("load", () => {
-      setLoaded(true);
-    });
+    homeImage.addEventListener("load", () => setLoaded(true));
   }, []);
 
   return (
     <Div>
-      <div id="mainText">
-        Lorem Ipsum
-        <br />
-        Think Different
-      </div>
-      <img
-        src="/assets/home/dark.jpg"
-        alt="soulart station"
+      <div
+        id="wrapper"
         className={`image ${scrolled ? "scrolled" : ""} ${
           loaded ? "" : "not-loaded"
         }`}
-        id="homeImage"
-      />
-      <div
-        className={`image skeleton h-32 w-32 ${loaded ? "not-loaded" : ""}`}
-      ></div>
+      >
+        <div id="mainText">
+          Lorem Ipsum
+          <br />
+          Think Different
+        </div>
+        <img
+          src="/assets/home/dark.jpg"
+          alt="soulart station"
+          id="homeImage"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            borderRadius: "20px",
+          }}
+        />
+      </div>
+
+      <div className={`image skeleton ${loaded ? "not-loaded" : ""}`}></div>
     </Div>
   );
 }
