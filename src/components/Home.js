@@ -32,6 +32,14 @@ const Div = styled.div`
     transition-property: scale;
     transition-duration: 0.75s;
     transition-timing-function: ease-in-out;
+
+    font-family: Arvo, sans-serif;
+    font-weight: 400;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 5;
   }
 
   .scrolled {
@@ -41,14 +49,14 @@ const Div = styled.div`
 
 function Home() {
   const [scrolled, setScrolled] = useState(false);
-
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const mainText = document.getElementById("mainText");
+    const homeImage = document.getElementById("homeImage");
+
     window.addEventListener("scroll", () => {
-      const a = window.scrollY;
-      if (a > 10) {
+      if (window.scrollY > 10) {
         setScrolled(true);
         mainText.style.scale = "0.8";
       } else {
@@ -57,27 +65,14 @@ function Home() {
       }
     });
 
-    const a = document.getElementById("homeImage");
-
-    a.addEventListener("load", () => {
+    homeImage.addEventListener("load", () => {
       setLoaded(true);
     });
   }, []);
 
   return (
     <Div>
-      <div
-        style={{
-          fontFamily: "Arvo",
-          fontWeight: 400,
-          position: "absolute",
-          left: "50%",
-          top: "50%",
-          zIndex: 5,
-          transform: "translate(-50%, -100%)",
-        }}
-        id="mainText"
-      >
+      <div id="mainText">
         Lorem Ipsum
         <br />
         Think Different
