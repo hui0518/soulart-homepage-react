@@ -39,7 +39,7 @@ function Header() {
   const [cls, setCls] = useState("");
   useEffect(() => {
     window.addEventListener("scroll", () =>
-      window.scrollY > 10 ? setCls("scrolled") : setCls("")
+      setCls(window.screenY > 10 ? "scrolled" : "")
     );
   }, []);
 
