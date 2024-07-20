@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import classNames from "classnames";
 
 import i18n from "../locales/i18n";
 
@@ -29,7 +30,7 @@ const Div = styled.div`
   }
 
   .navbar-end {
-    a {
+    span {
       background: none;
       border: none;
     }
@@ -38,6 +39,7 @@ const Div = styled.div`
 
 function Header() {
   const [lang, setLang] = useState("ko");
+  const [scrolled, setScrolled] = useState(false);
 
   const changeLanguage = () => {
     const nextLang = lang === "ko" ? "en" : "ko";
@@ -45,11 +47,10 @@ function Header() {
     i18n.changeLanguage(nextLang);
   };
 
-  const [cls, setCls] = useState("");
   useEffect(() => {
-    window.addEventListener("scroll", () =>
-      setCls(window.screenY > 10 ? "scrolled" : "")
-    );
+    window.addEventListener("scroll", () => {
+      setScrolled(window.scrollY > 10);
+    });
   }, []);
 
   const buttons = [
@@ -72,7 +73,7 @@ function Header() {
 
   return (
     <Div>
-      <div className={`navbar ${cls}`}>
+      <div className={classNames("navbar", { scrolled })}>
         <div className="navbar-start">
           <img
             src="/assets/logo.png"
@@ -106,7 +107,7 @@ function Header() {
             >
               {buttons.map(({ name }) => (
                 <li href="/" key={name + "asdf"}>
-                  <a>{name}</a>
+                  <a href="/">{name}</a>
                 </li>
               ))}
             </ul>
@@ -130,9 +131,9 @@ function Header() {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn" onClick={changeLanguage}>
-            {lang == "ko" ? "Korean" : "English"}
-          </a>
+          <span className="btn" onClick={changeLanguage}>
+            {lang === "ko" ? "Korean" : "English"}
+          </span>
         </div>
       </div>
     </Div>

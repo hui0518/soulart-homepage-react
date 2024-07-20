@@ -8,7 +8,7 @@ import Buy from "./components/Buy";
 import Footer from "./components/Footer";
 
 window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
 });
 
 function App() {

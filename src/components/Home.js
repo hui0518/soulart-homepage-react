@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -56,9 +57,7 @@ function Home() {
     <Div>
       <div
         id="wrapper"
-        className={`image ${scrolled ? "scrolled" : ""} ${
-          loaded ? "" : "not-loaded"
-        }`}
+        className={classNames("image", { scrolled, "not-loaded": !loaded })}
       >
         <div id="mainText">
           Lorem Ipsum
@@ -78,7 +77,9 @@ function Home() {
         />
       </div>
 
-      <div className={`image skeleton ${loaded ? "not-loaded" : ""}`}></div>
+      <div
+        className={classNames("image", "skeleton", { "not-loaded": loaded })}
+      />
     </Div>
   );
 }
