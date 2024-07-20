@@ -1,6 +1,6 @@
-import classNames from "classnames";
-import { useEffect, useState } from "react";
-import styled from "styled-components";
+import classNames from 'classnames';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const Div = styled.div`
   width: 100%;
@@ -30,6 +30,7 @@ const Div = styled.div`
   #mainText {
     font-family: Arvo, sans-serif;
     font-weight: 400;
+    font-size: 30px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -47,17 +48,17 @@ function Home() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => setScrolled(window.scrollY > 10));
+    window.addEventListener('scroll', () => setScrolled(window.scrollY > 10));
 
-    const homeImage = document.getElementById("homeImage");
-    homeImage.addEventListener("load", () => setLoaded(true));
+    const homeImage = document.getElementById('homeImage');
+    homeImage.addEventListener('load', () => setLoaded(true));
   }, []);
 
   return (
     <Div>
       <div
         id="wrapper"
-        className={classNames("image", { scrolled, "not-loaded": !loaded })}
+        className={classNames('image', { scrolled, 'not-loaded': !loaded })}
       >
         <div id="mainText">
           Lorem Ipsum
@@ -69,16 +70,16 @@ function Home() {
           alt="soulart station"
           id="homeImage"
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            borderRadius: "20px",
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '20px',
           }}
         />
       </div>
 
       <div
-        className={classNames("image", "skeleton", { "not-loaded": loaded })}
+        className={classNames('image', 'skeleton', { 'not-loaded': loaded })}
       />
     </Div>
   );

@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Div = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+  height: 100vh;
 `;
 
 function Buy() {
