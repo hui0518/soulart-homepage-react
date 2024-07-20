@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
+import { useTranslation } from "react-i18next";
+import i18n from "../locales/i18n";
+
 const Div = styled.div`
   .navbar {
     position: fixed;
@@ -22,7 +25,6 @@ const Div = styled.div`
   }
 
   .dropdown-content {
-    /* From https://css.glass */
     background: rgb(20, 20, 20);
     border-radius: 10px;
   }
@@ -36,6 +38,16 @@ const Div = styled.div`
 `;
 
 function Header() {
+  const { t } = useTranslation();
+
+  const [lang, setLang] = useState("ko");
+
+  const changeLanguage = () => {
+    const nextLang = lang === "ko" ? "en" : "ko";
+    setLang(nextLang);
+    i18n.changeLanguage(nextLang);
+  };
+
   const [cls, setCls] = useState("");
   useEffect(() => {
     window.addEventListener("scroll", () =>
@@ -63,6 +75,7 @@ function Header() {
 
   return (
     <Div>
+      <div>{t("header.home")}</div>
       <div className={`navbar ${cls}`}>
         <div className="navbar-start">
           <img
@@ -121,7 +134,9 @@ function Header() {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Lang</a>
+          <a className="btn" onClick={changeLanguage}>
+            {lang == "ko" ? "Korean" : "English"}
+          </a>
         </div>
       </div>
     </Div>
