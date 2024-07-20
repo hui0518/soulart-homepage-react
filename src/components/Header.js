@@ -7,30 +7,29 @@ const Div = styled.div`
     left: 0;
     right: 0;
     top: 0;
+
+    z-index: 10;
+
+    transition-duration: 0.4s;
+    transition-property: background, border-radius, box-shadow, backdrop-filter,
+      -webkit-backdrop-filter;
   }
 
   .scrolled {
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.13);
+    background: rgba(0, 0, 0, 0.28);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(13.7px);
+    -webkit-backdrop-filter: blur(13.7px);
   }
 `;
 
 function Header() {
   const [cls, setCls] = useState("");
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      console.log(window.scrollY);
-      if (window.scrollY > 10) {
-        setCls("scrolled");
-      } else {
-        setCls("");
-      }
-    });
+    window.addEventListener("scroll", () =>
+      window.scrollY > 10 ? setCls("scrolled") : setCls("")
+    );
   }, []);
 
   return (

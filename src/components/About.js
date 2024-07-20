@@ -1,8 +1,22 @@
+import styled from "styled-components";
+
+const Div = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+`;
+
 function About() {
   return (
-    <div>
-      <video src="/assets/about/video3.mp4" muted autoPlay loop></video>
-    </div>
+    <Div>
+      <video
+        src="/assets/about/video3.mp4"
+        muted
+        autoPlay
+        loop
+        width="600px"
+      ></video>
+    </Div>
   );
 }
 
