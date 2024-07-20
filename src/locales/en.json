@@ -1,5 +1,17 @@
 {
   "header": {
     "home": "Home"
+  },
+  "members": {
+    "uzuki": "Uzuki Shimamura",
+    "rin": "Rin Shibuya",
+    "mio": "Mio Honda",
+    "ikuyo": "Ikuyo Kita"
+  },
+  "partners": {
+    "hololive": "Hololive",
+    "idolmaster": "idolm@ster",
+    "kaist": "KAIST",
+    "tesla": "Tesla"
   }
 }

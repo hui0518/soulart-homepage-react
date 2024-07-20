@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 function Member({ name, image }) {
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
@@ -22,28 +24,29 @@ function Member({ name, image }) {
 
 const members = [
   {
-    name: "Uzuki Shimamura",
+    name: "uzuki",
     image: "/assets/members/uzuki.webp",
   },
   {
-    name: "Rin Shibuya",
+    name: "rin",
     image: "/assets/members/rin.webp",
   },
   {
-    name: "Mio Honda",
+    name: "mio",
     image: "/assets/members/mio.webp",
   },
   {
-    name: "Ikuyo Kita",
+    name: "ikuyo",
     image: "/assets/members/ikuyo.webp",
   },
 ];
 
 function Members() {
+  const { t } = useTranslation();
   return (
     <div style={{ display: "flex", flexFlow: "row" }}>
       {members.map(({ name, image }) => (
-        <Member name={name} image={image} key={name} />
+        <Member name={t(`members.${name}`)} image={image} key={name} />
       ))}
     </div>
   );

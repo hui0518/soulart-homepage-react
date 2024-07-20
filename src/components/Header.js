@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { useTranslation } from "react-i18next";
 import i18n from "../locales/i18n";
 
 const Div = styled.div`
@@ -38,8 +37,6 @@ const Div = styled.div`
 `;
 
 function Header() {
-  const { t } = useTranslation();
-
   const [lang, setLang] = useState("ko");
 
   const changeLanguage = () => {
@@ -75,7 +72,6 @@ function Header() {
 
   return (
     <Div>
-      <div>{t("header.home")}</div>
       <div className={`navbar ${cls}`}>
         <div className="navbar-start">
           <img

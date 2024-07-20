@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 function Partner({ name, image }) {
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
@@ -22,15 +24,15 @@ function Partner({ name, image }) {
 
 const partners = [
   {
-    name: "Hololive",
+    name: "hololive",
     image: "/assets/partners/hololive.jpg",
   },
   {
-    name: "idolm@ster",
+    name: "idolmaster",
     image: "/assets/partners/idolmaster.webp",
   },
   {
-    name: "Kaist",
+    name: "kaist",
     image: "/assets/partners/kaist.jpg",
   },
   {
@@ -40,10 +42,11 @@ const partners = [
 ];
 
 function Partners() {
+  const { t } = useTranslation();
   return (
     <div style={{ display: "flex", flexFlow: "row" }}>
       {partners.map(({ name, image }) => (
-        <Partner name={name} image={image} key={name} />
+        <Partner name={t(`partners.${name}`)} image={image} key={name} />
       ))}
     </div>
   );
