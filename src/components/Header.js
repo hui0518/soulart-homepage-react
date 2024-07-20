@@ -17,10 +17,8 @@ const Div = styled.div`
 
   .scrolled {
     background: rgba(0, 0, 0, 0.28);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(13.7px);
-    -webkit-backdrop-filter: blur(13.7px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 `;
 
@@ -31,6 +29,24 @@ function Header() {
       window.scrollY > 10 ? setCls("scrolled") : setCls("")
     );
   }, []);
+
+  const buttons = [
+    {
+      name: "Home",
+    },
+    {
+      name: "About",
+    },
+    {
+      name: "Members",
+    },
+    {
+      name: "Partners",
+    },
+    {
+      name: "Buy",
+    },
+  ];
 
   return (
     <Div>
@@ -66,44 +82,29 @@ function Header() {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Home</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
-              <li>
-                <a>Members</a>
-              </li>
-              <li>
-                <a>Partners</a>
-              </li>
-              <li>
-                <a>Buy</a>
-              </li>
+              {buttons.map(({ name }) => (
+                <li href="/" key={name + "asdf"}>
+                  <a>{name}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul
             className="menu menu-horizontal px-1"
-            style={{ fontFamily: "Arvo", fontSize: "20px", fontWeight: "400" }}
+            style={{
+              fontFamily: "Arvo",
+              fontSize: "20px",
+              fontWeight: "400",
+              color: "white",
+            }}
           >
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
-            <li>
-              <a>Members</a>
-            </li>
-            <li>
-              <a>Partners</a>
-            </li>
-            <li>
-              <a>Buy</a>
-            </li>
+            {buttons.map(({ name }) => (
+              <li key={name + "asdfasdf"}>
+                <a href="/">{name}</a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="navbar-end">
