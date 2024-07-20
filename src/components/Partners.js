@@ -1,11 +1,22 @@
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 function Partner({ name, image }) {
   return (
-    <div
-      className="card bg-base-100 w-96 shadow-xl"
-      style={{ display: 'flex', flexFlow: 'column', alignItems: 'center' }}
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      className="card w-96"
+      style={{
+        display: 'flex',
+        flexFlow: 'column',
+        alignItems: 'center',
+        width: '200px',
+        height: '300px',
+        marginLeft: '10px',
+        marginRight: '10px',
+        background: 'none',
+      }}
     >
       <figure>
         <img
@@ -22,7 +33,7 @@ function Partner({ name, image }) {
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -58,10 +69,25 @@ function Partners() {
     <Div>
       <div
         style={{
+          marginTop: '30px',
+          marginBottom: '30px',
+          fontWeight: 900,
+          fontSize: '50px',
+          color: 'white',
+          fontFamily: `'Josefin Sans', sans-serif`,
+          fontStyle: 'italic',
+        }}
+      >
+        Partners
+      </div>
+      <div
+        style={{
           display: 'flex',
           flexFlow: 'row',
-          width: '80%',
-          height: '100vh',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          width: '90%',
+          justifyContent: 'center',
         }}
       >
         {partners.map(({ name, image }) => (
