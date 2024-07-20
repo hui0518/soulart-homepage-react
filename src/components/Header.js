@@ -59,6 +59,7 @@ function Header() {
     },
     {
       name: 'About',
+      link: '#about',
     },
     {
       name: 'Members',
@@ -106,8 +107,8 @@ function Header() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2"
             >
               {buttons.map(({ name }) => (
-                <li href="/" key={name + '_dropdown'}>
-                  <a href="/">{name}</a>
+                <li key={name + '_dropdown'}>
+                  <a href="#about">{name}</a>
                 </li>
               ))}
             </ul>
@@ -125,7 +126,7 @@ function Header() {
           >
             {buttons.map(({ name }) => (
               <li key={name}>
-                <a href="/">{name}</a>
+                <a href="#about">{name}</a>
               </li>
             ))}
           </ul>
