@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import styled from "styled-components";
-import classNames from "classnames";
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import classNames from 'classnames';
 
-import i18n from "../locales/i18n";
+import i18n from '../locales/i18n';
 
 const Div = styled.div`
   .navbar {
@@ -38,50 +38,50 @@ const Div = styled.div`
 `;
 
 function Header() {
-  const [lang, setLang] = useState("ko");
+  const [lang, setLang] = useState('ko');
   const [scrolled, setScrolled] = useState(false);
 
   const changeLanguage = () => {
-    const nextLang = lang === "ko" ? "en" : "ko";
+    const nextLang = lang === 'ko' ? 'en' : 'ko';
     setLang(nextLang);
     i18n.changeLanguage(nextLang);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       setScrolled(window.scrollY > 10);
     });
   }, []);
 
   const buttons = [
     {
-      name: "Home",
+      name: 'Home',
     },
     {
-      name: "About",
+      name: 'About',
     },
     {
-      name: "Members",
+      name: 'Members',
     },
     {
-      name: "Partners",
+      name: 'Partners',
     },
     {
-      name: "Buy",
+      name: 'Buy',
     },
   ];
 
   return (
     <Div>
-      <div className={classNames("navbar", { scrolled })}>
+      <div className={classNames('navbar', { scrolled })}>
         <div className="navbar-start">
           <img
             src="/assets/logo.png"
             width="100px"
             alt="company logo"
             style={{
-              marginLeft: "20px",
-              marginRight: "10px",
+              marginLeft: '20px',
+              marginRight: '10px',
             }}
           ></img>
           <div className="dropdown">
@@ -106,7 +106,7 @@ function Header() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2"
             >
               {buttons.map(({ name }) => (
-                <li href="/" key={name + "asdf"}>
+                <li href="/" key={name + 'asdf'}>
                   <a href="/">{name}</a>
                 </li>
               ))}
@@ -117,14 +117,14 @@ function Header() {
           <ul
             className="menu menu-horizontal px-1"
             style={{
-              fontFamily: "Arvo",
-              fontSize: "20px",
-              fontWeight: "400",
-              color: "white",
+              fontFamily: 'Arvo',
+              fontSize: '20px',
+              fontWeight: '400',
+              color: 'white',
             }}
           >
             {buttons.map(({ name }) => (
-              <li key={name + "asdfasdf"}>
+              <li key={name + 'asdfasdf'}>
                 <a href="/">{name}</a>
               </li>
             ))}
@@ -132,7 +132,7 @@ function Header() {
         </div>
         <div className="navbar-end">
           <span className="btn" onClick={changeLanguage}>
-            {lang === "ko" ? "Korean" : "English"}
+            {lang === 'ko' ? 'View in English' : '한국어로 보기'}
           </span>
         </div>
       </div>
