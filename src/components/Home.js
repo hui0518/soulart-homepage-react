@@ -11,15 +11,15 @@ const Div = styled.div`
   align-items: center;
 
   .image {
-    width: 90%;
-    height: 80%;
+    width: 90vw;
+    height: 85vh;
     border-radius: 20px;
     display: block;
 
     scale: 1;
 
     transition-property: scale;
-    transition-duration: 0.75s;
+    transition-duration: 0.6s;
     transition-timing-function: ease-in-out;
   }
 
@@ -30,12 +30,18 @@ const Div = styled.div`
   #mainText {
     font-family: Arvo, sans-serif;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 50px;
+    color: white;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -75%);
     z-index: 5;
+
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
   }
 
   .scrolled {
@@ -48,7 +54,24 @@ function Home() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => setScrolled(window.scrollY > 10));
+    const mainText = document.getElementById('mainText');
+
+    window.addEventListener('scroll', () => {
+      setScrolled(window.scrollY > 10);
+      if (window.scrollY > 10) {
+        mainText.style.transitionDuration = '0.5s';
+        mainText.style.opacity = 0;
+      } else {
+        mainText.style.transitionDuration = '2s';
+        setTimeout(() => {
+          mainText.style.opacity = 1;
+        }, 1000);
+      }
+    });
+
+    setTimeout(() => {
+      mainText.style.opacity = 1;
+    }, 1000);
 
     const homeImage = document.getElementById('homeImage');
     homeImage.addEventListener('load', () => setLoaded(true));
