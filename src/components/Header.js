@@ -20,6 +20,19 @@ const Div = styled.div`
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
+
+  .dropdown-content {
+    /* From https://css.glass */
+    background: rgb(20, 20, 20);
+    border-radius: 10px;
+  }
+
+  .navbar-end {
+    a {
+      background: none;
+      border: none;
+    }
+  }
 `;
 
 function Header() {
@@ -80,7 +93,7 @@ function Header() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2"
             >
               {buttons.map(({ name }) => (
                 <li href="/" key={name + "asdf"}>
