@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Dialog = styled.dialog`
   .modal-box {
@@ -94,17 +95,28 @@ function Contact() {
           placeholder={t('contact.memo')}
         ></textarea>
 
-        <button
+        <motion.button
           id="submitButton"
           className="btn btn-active btn-primary"
           onClick={sendEmail}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           {t('contact.button')}
-        </button>
+        </motion.button>
 
         <form method="dialog">
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-            ✕
+            <motion.div
+              whileHover={{ scale: 1.2, rotate: 90 }}
+              whileTap={{
+                scale: 0.8,
+                rotate: -90,
+                borderRadius: '100%',
+              }}
+            >
+              ✕
+            </motion.div>
           </button>
         </form>
       </div>
