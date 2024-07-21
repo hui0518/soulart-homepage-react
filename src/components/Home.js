@@ -38,6 +38,7 @@ const Div = styled.div`
     top: 50%;
     transform: translate(-50%, -75%);
     z-index: 5;
+    white-space: pre-line;
 
     opacity: 0;
     transition-property: opacity;
@@ -47,6 +48,13 @@ const Div = styled.div`
 
   .scrolled {
     scale: 0.8;
+  }
+
+  #homeImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
   }
 `;
 
@@ -86,20 +94,8 @@ function Home() {
         id="wrapper"
         className={classNames('image', { scrolled, 'not-loaded': !loaded })}
       >
-        <div id="mainText" style={{ whiteSpace: 'pre-line' }}>
-          {t('slogan')}
-        </div>
-        <img
-          src="/assets/home/dark.jpg"
-          alt="soulart station"
-          id="homeImage"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            borderRadius: '20px',
-          }}
-        />
+        <div id="mainText">{t('slogan')}</div>
+        <img src="/assets/home/dark.jpg" alt="soulart station" id="homeImage" />
       </div>
 
       <div

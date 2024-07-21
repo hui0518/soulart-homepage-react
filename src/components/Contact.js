@@ -1,4 +1,28 @@
 import { useTranslation } from 'react-i18next';
+import styled from 'styled-components';
+
+const Dialog = styled.dialog`
+  .modal-box {
+    background-color: rgb(20, 20, 20);
+    border-radius: 20px;
+    height: 600px;
+  }
+
+  input {
+    margin-left: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    resize: none;
+    height: 200px;
+  }
+
+  #submitButton {
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+`;
 
 function Contact() {
   const sendEmail = (event) => {
@@ -22,22 +46,14 @@ function Contact() {
   const [t] = useTranslation();
 
   return (
-    <dialog id="my_modal_2" className="modal">
-      <div
-        className="modal-box"
-        style={{
-          backgroundColor: 'rgb(20, 20, 20)',
-          borderRadius: '20px',
-          height: '600px',
-        }}
-      >
+    <Dialog id="my_modal_2" className="modal">
+      <div className="modal-box">
         <h3 className="font-bold text-lg">{t('contact.title')}</h3>
         <p className="py-4">{t('contact.description')}.</p>
 
         <label className="input input-bordered flex items-center gap-2">
           <img src="/assets/icons/signature.svg"></img>
           <input
-            style={{ marginLeft: '10px' }}
             type="text"
             className="grow"
             placeholder={t('contact.name')}
@@ -47,7 +63,6 @@ function Contact() {
         <label className="input input-bordered flex items-center gap-2">
           <img src="/assets/icons/email.svg"></img>
           <input
-            style={{ marginLeft: '10px' }}
             type="text"
             className="grow"
             placeholder={t('contact.email')}
@@ -57,7 +72,6 @@ function Contact() {
         <label className="input input-bordered flex items-center gap-2">
           <img src="/assets/icons/company.svg"></img>
           <input
-            style={{ marginLeft: '10px' }}
             type="text"
             className="grow"
             placeholder={t('contact.company')}
@@ -67,7 +81,6 @@ function Contact() {
         <label className="input input-bordered flex items-center gap-2">
           <img src="/assets/icons/phone.svg"></img>
           <input
-            style={{ marginLeft: '10px' }}
             type="text"
             className="grow"
             placeholder={t('contact.phone')}
@@ -76,16 +89,15 @@ function Contact() {
         </label>
 
         <textarea
-          style={{ width: '100%', resize: 'none', height: '200px' }}
           className="textarea textarea-bordered"
           placeholder={t('contact.memo')}
           id="memo"
         ></textarea>
 
         <button
+          id="submitButton"
           className="btn btn-active btn-primary"
           onClick={sendEmail}
-          style={{ marginTop: '20px' }}
         >
           {t('contact.button')}
         </button>
@@ -99,7 +111,7 @@ function Contact() {
       <form method="dialog" className="modal-backdrop">
         <button>close</button>
       </form>
-    </dialog>
+    </Dialog>
   );
 }
 

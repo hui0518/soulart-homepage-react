@@ -16,6 +16,10 @@ const Div = styled.div`
     font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
     font-style: italic;
   }
+
+  img {
+    width: 300px;
+  }
 `;
 
 function Buy() {
@@ -24,7 +28,7 @@ function Buy() {
   return (
     <Div id="buy">
       <div className="title">{t('title.buy')}</div>
-      <img src="/assets/buy/elon.jpg" alt="melon" width="300px" />
+      <img src="/assets/buy/elon.jpg" alt="melon" />
       <h1>{t('buy.description')}</h1>
     </Div>
   );

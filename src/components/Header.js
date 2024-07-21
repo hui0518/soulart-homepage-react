@@ -38,6 +38,18 @@ const Div = styled.div`
       border: none;
     }
   }
+
+  #logo {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  #desktopButtons {
+    font-family: 'Arvo', 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+  }
 `;
 
 function Header() {
@@ -59,23 +71,18 @@ function Header() {
 
   const buttons = [
     {
-      name: 'Home',
       id: 'home',
     },
     {
-      name: 'About',
       id: 'about',
     },
     {
-      name: 'Members',
       id: 'members',
     },
     {
-      name: 'Partners',
       id: 'partners',
     },
     {
-      name: 'Buy',
       id: 'buy',
     },
   ];
@@ -85,13 +92,10 @@ function Header() {
       <div className={classNames('navbar', { scrolled })}>
         <div className="navbar-start">
           <img
+            id="logo"
             src="/assets/logo.png"
             width="100px"
             alt="company logo"
-            style={{
-              marginLeft: '20px',
-              marginRight: '10px',
-            }}
           ></img>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -114,8 +118,8 @@ function Header() {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2"
             >
-              {buttons.map(({ name, id }) => (
-                <li key={name + '_dropdown'}>
+              {buttons.map(({ id }) => (
+                <li key={id + '_dropdown'}>
                   <a
                     onClick={() => {
                       const a = document.getElementById(id);
@@ -133,17 +137,9 @@ function Header() {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul
-            className="menu menu-horizontal px-1"
-            style={{
-              fontFamily: 'Arvo',
-              fontSize: '20px',
-              fontWeight: '400',
-              color: 'white',
-            }}
-          >
-            {buttons.map(({ name, id }) => (
-              <li key={name}>
+          <ul id="desktopButtons" className="menu menu-horizontal px-1">
+            {buttons.map(({ id }) => (
+              <li key={id}>
                 <a
                   onClick={() => {
                     const a = document.getElementById(id);

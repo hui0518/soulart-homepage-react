@@ -2,23 +2,23 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+const MemberDiv = styled(motion.div)`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  width: 200px;
+  height: 400px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  background: none;
+  z-index: 1;
+`;
+
 function Member({ name, image }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="card"
-      style={{
-        display: 'flex',
-        flexFlow: 'column',
-        alignItems: 'center',
-        width: '200px',
-        height: '400px',
-        marginLeft: '10px',
-        marginRight: '10px',
-        background: 'none',
-        zIndex: 1,
-      }}
-    >
+    <MemberDiv whileHover={{ scale: 1.05 }} className="card">
       <figure>
         <img
           src={image}
@@ -35,7 +35,7 @@ function Member({ name, image }) {
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
       </div>
-    </motion.div>
+    </MemberDiv>
   );
 }
 
@@ -63,37 +63,35 @@ const Div = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+
+  #title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: white;
+    font-weight: 900;
+    font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+    font-style: italic;
+    z-index: 1;
+  }
+
+  #membersContainer {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+    z-index: 1;
+  }
 `;
 
 function Members() {
   const { t } = useTranslation();
   return (
     <Div id="members">
-      <div
-        style={{
-          marginTop: '30px',
-          marginBottom: '30px',
-          fontSize: '50px',
-          color: 'white',
-          fontWeight: 900,
-          fontFamily: `'Josefin Sans', sans-serif`,
-          fontStyle: 'italic',
-          zIndex: 1,
-        }}
-      >
-        {t('title.members')}
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexFlow: 'row',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          width: '90%',
-          justifyContent: 'center',
-          zIndex: 1,
-        }}
-      >
+      <div id="title">{t('title.members')}</div>
+      <div id="membersContainer">
         {members.map(({ name, image }) => (
           <Member name={t(`members.${name}`)} image={image} key={name} />
         ))}

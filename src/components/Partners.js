@@ -2,38 +2,34 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+const PartnerDiv = styled(motion.div)`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: none;
+
+  .partnerImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+`;
+
 function Partner({ name, image }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="card w-96"
-      style={{
-        display: 'flex',
-        flexFlow: 'column',
-        alignItems: 'center',
-        width: '200px',
-        height: '300px',
-        marginLeft: '10px',
-        marginRight: '10px',
-        background: 'none',
-      }}
-    >
+    <PartnerDiv whileHover={{ scale: 1.05 }} className="card w-96">
       <figure>
-        <img
-          src={image}
-          alt={name}
-          style={{
-            width: '200px',
-            height: '200px',
-            objectFit: 'cover',
-            borderRadius: '20px',
-          }}
-        />
+        <img className="partnerImage" src={image} alt={name} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
       </div>
-    </motion.div>
+    </PartnerDiv>
   );
 }
 
@@ -61,35 +57,33 @@ const Div = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+
+  #title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 50px;
+    color: white;
+    font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+    font-family: italic;
+  }
+
+  #partnersContainer {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+  }
 `;
 
 function Partners() {
   const { t } = useTranslation();
   return (
     <Div id="partners">
-      <div
-        style={{
-          marginTop: '30px',
-          marginBottom: '30px',
-          fontWeight: 900,
-          fontSize: '50px',
-          color: 'white',
-          fontFamily: `'Josefin Sans', sans-serif`,
-          fontStyle: 'italic',
-        }}
-      >
-        {t('title.partners')}
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexFlow: 'row',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          width: '90%',
-          justifyContent: 'center',
-        }}
-      >
+      <div id="title">{t('title.partners')}</div>
+      <div id="partnersContainer">
         {partners.map(({ name, image }) => (
           <Partner name={t(`partners.${name}`)} image={image} key={name} />
         ))}

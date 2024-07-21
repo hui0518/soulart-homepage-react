@@ -13,6 +13,14 @@ const Div = styled.div`
   #carousel {
     width: 90vw;
     height: 500px;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+    font-style: italic;
   }
 `;
 
@@ -44,22 +52,12 @@ function About() {
 
   return (
     <Div id="about">
-      <div
-        style={{
-          fontSize: '50px',
-          color: 'white',
-          fontWeight: 900,
-          fontFamily: `'Josefin Sans', sans-serif`,
-          fontStyle: 'italic',
-        }}
-      >
-        {t('title.about')}
-      </div>
+      <div className="title">{t('title.about')}</div>
 
       <div
         className="mainVideo carousel carousel-center space-x-4 p-4"
         id="carousel"
-        style={{ overflow: 'hidden', width: outerWidth }}
+        style={{ width: outerWidth }}
       >
         <div className="carousel-item" style={{ width: half }}></div>
         <div className="carousel-item">
