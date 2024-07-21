@@ -54,44 +54,44 @@ function Contact() {
         <label className="input input-bordered flex items-center gap-2">
           <img src="/assets/icons/signature.svg"></img>
           <input
-            type="text"
-            className="grow"
-            placeholder={t('contact.name')}
             id="name"
+            className="grow"
+            type="text"
+            placeholder={t('contact.name')}
           />
         </label>
         <label className="input input-bordered flex items-center gap-2">
           <img src="/assets/icons/email.svg"></img>
           <input
-            type="text"
-            className="grow"
-            placeholder={t('contact.email')}
             id="email"
+            className="grow"
+            type="text"
+            placeholder={t('contact.email')}
           />
         </label>
         <label className="input input-bordered flex items-center gap-2">
           <img src="/assets/icons/company.svg"></img>
           <input
-            type="text"
-            className="grow"
-            placeholder={t('contact.company')}
             id="company"
+            className="grow"
+            type="text"
+            placeholder={t('contact.company')}
           />
         </label>
         <label className="input input-bordered flex items-center gap-2">
           <img src="/assets/icons/phone.svg"></img>
           <input
-            type="text"
-            className="grow"
-            placeholder={t('contact.phone')}
             id="phone"
+            className="grow"
+            type="text"
+            placeholder={t('contact.phone')}
           />
         </label>
 
         <textarea
+          id="memo"
           className="textarea textarea-bordered"
           placeholder={t('contact.memo')}
-          id="memo"
         ></textarea>
 
         <button

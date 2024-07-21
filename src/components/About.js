@@ -55,8 +55,8 @@ function About() {
       <div className="title">{t('title.about')}</div>
 
       <div
-        className="mainVideo carousel carousel-center space-x-4 p-4"
         id="carousel"
+        className="mainVideo carousel carousel-center space-x-4 p-4"
         style={{ width: outerWidth }}
       >
         <div className="carousel-item" style={{ width: half }}></div>

@@ -96,7 +96,7 @@ function Home() {
         className={classNames('image', { scrolled, 'not-loaded': !loaded })}
       >
         <div id="mainText">{t('slogan')}</div>
-        <img src="/assets/home/dark.jpg" alt="soulart station" id="homeImage" />
+        <img id="homeImage" src="/assets/home/dark.jpg" alt="soulart station" />
       </div>
 
       <div

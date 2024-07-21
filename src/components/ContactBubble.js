@@ -30,11 +30,11 @@ function ContactBubble() {
   return (
     <Div>
       <motion.button
+        id="apply"
         className="btn"
         onClick={() => document.getElementById('my_modal_2').showModal()}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        id="apply"
       >
         <div>Contact</div>
       </motion.button>

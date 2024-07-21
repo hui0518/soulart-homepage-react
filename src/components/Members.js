@@ -14,23 +14,21 @@ const MemberDiv = styled(motion.div)`
   display: flex;
   flex-flow: column;
   align-items: center;
+
+  img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 1;
+  }
 `;
 
 function Member({ name, image }) {
   return (
     <MemberDiv whileHover={{ scale: 1.05 }} className="card">
       <figure>
-        <img
-          src={image}
-          alt={name}
-          style={{
-            width: '200px',
-            height: '300px',
-            objectFit: 'cover',
-            borderRadius: '20px',
-            zIndex: 1,
-          }}
-        />
+        <img src={image} alt={name} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>

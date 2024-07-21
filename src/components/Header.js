@@ -38,6 +38,7 @@ const Div = styled.div`
   }
 
   #logo {
+    width: 100px;
     margin-left: 20px;
     margin-right: 10px;
   }
@@ -89,14 +90,9 @@ function Header() {
     <Div>
       <div className={classNames('navbar', { scrolled })}>
         <div className="navbar-start">
-          <img
-            id="logo"
-            src="/assets/logo.png"
-            width="100px"
-            alt="company logo"
-          ></img>
+          <img id="logo" src="/assets/logo.png" alt="company logo"></img>
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div className="btn btn-ghost lg:hidden" tabIndex={0} role="button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -113,16 +109,16 @@ function Header() {
               </svg>
             </div>
             <ul
-              tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2"
+              tabIndex={0}
             >
               {buttons.map(({ id }) => (
                 <li key={id + '_dropdown'}>
                   <a
                     onClick={() => {
-                      const a = document.getElementById(id);
+                      const elem = document.getElementById(id);
                       window.scrollTo({
-                        top: a.offsetTop - 90,
+                        top: elem.offsetTop - 90,
                         behavior: 'smooth',
                       });
                     }}
@@ -140,9 +136,9 @@ function Header() {
               <li key={id}>
                 <a
                   onClick={() => {
-                    const a = document.getElementById(id);
+                    const elem = document.getElementById(id);
                     window.scrollTo({
-                      top: a.offsetTop - 90,
+                      top: elem.offsetTop - 90,
                       behavior: 'smooth',
                     });
                   }}
