@@ -67,7 +67,7 @@ const Div = styled.div`
     font-size: 50px;
     font-weight: 900;
     font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
-    font-family: italic;
+    font-style: italic;
     color: white;
   }
 
