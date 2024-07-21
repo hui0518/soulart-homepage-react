@@ -46,54 +46,55 @@ function Contact() {
 
   const [t] = useTranslation();
 
+  const inputs = [
+    {
+      id: 'name',
+      placeholder: 'name',
+      icon: '/assets/icons/signature.svg',
+    },
+    {
+      id: 'email',
+      placeholder: 'email',
+      icon: '/assets/icons/email.svg',
+    },
+    {
+      id: 'company',
+      placeholder: 'company',
+      icon: '/assets/icons/company.svg',
+    },
+    {
+      id: 'phone',
+      placeholder: 'phone',
+      icon: '/assets/icons/phone.svg',
+    },
+  ];
+
   return (
     <Dialog id="my_modal_2" className="modal">
       <div className="modal-box">
         <h3 className="font-bold text-lg">{t('contact.title')}</h3>
         <p className="py-4">{t('contact.description')}.</p>
 
-        <label className="input input-bordered flex items-center gap-2">
-          <img src="/assets/icons/signature.svg"></img>
-          <input
-            id="name"
-            className="grow"
-            type="text"
-            placeholder={t('contact.name')}
-          />
-        </label>
-        <label className="input input-bordered flex items-center gap-2">
-          <img src="/assets/icons/email.svg"></img>
-          <input
-            id="email"
-            className="grow"
-            type="text"
-            placeholder={t('contact.email')}
-          />
-        </label>
-        <label className="input input-bordered flex items-center gap-2">
-          <img src="/assets/icons/company.svg"></img>
-          <input
-            id="company"
-            className="grow"
-            type="text"
-            placeholder={t('contact.company')}
-          />
-        </label>
-        <label className="input input-bordered flex items-center gap-2">
-          <img src="/assets/icons/phone.svg"></img>
-          <input
-            id="phone"
-            className="grow"
-            type="text"
-            placeholder={t('contact.phone')}
-          />
-        </label>
+        {inputs.map(({ id, placeholder, icon }) => (
+          <label
+            key={id}
+            className="input input-bordered flex items-center gap-2"
+          >
+            <img src={icon}></img>
+            <input
+              id={id}
+              className="grow"
+              type="text"
+              placeholder={t(`contact.${placeholder}`)}
+            />
+          </label>
+        ))}
 
         <textarea
           id="memo"
           className="textarea textarea-bordered"
           placeholder={t('contact.memo')}
-        ></textarea>
+        />
 
         <motion.button
           id="submitButton"
