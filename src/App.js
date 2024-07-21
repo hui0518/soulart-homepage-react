@@ -10,13 +10,8 @@ import Contact from './components/Contact';
 import { motion } from 'framer-motion';
 
 window.addEventListener('scroll', () => {
-  const a = document.getElementById('apply');
-
-  if (window.scrollY > 10) {
-    a.style.opacity = 1;
-  } else {
-    a.style.opacity = 0;
-  }
+  const contactBubble = document.getElementById('apply');
+  contactBubble.style.opacity = window.scrollY > 10 ? 1 : 0;
 });
 
 function App() {

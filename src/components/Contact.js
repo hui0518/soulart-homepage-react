@@ -3,18 +3,19 @@ import { useTranslation } from 'react-i18next';
 function Contact() {
   const sendEmail = (event) => {
     event.preventDefault();
-    const xs = ['name', 'phone', 'email', 'memo', 'company'];
 
-    const ys = xs.map((x) => {
-      const a = document.getElementById(x);
-      return `${x}:%0A${a.value}%0A%0A`;
-    });
+    const keys = ['name', 'phone', 'email', 'memo', 'company'];
+    const body = keys
+      .map((x) => {
+        const value = document.getElementById(x).value;
+        return `${x}:%0A${value}%0A%0A`;
+      })
+      .join('');
 
     const title = 'Contact to Soulart';
-    const body = ys.join('');
     const soulartEmail = 'hui051875@gmail.com';
-
     const mailLink = `mailto:${soulartEmail}?subject=${title}&body=${body}`;
+
     window.location.href = mailLink;
   };
 

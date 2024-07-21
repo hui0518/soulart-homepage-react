@@ -22,30 +22,22 @@ function About() {
   const outerWidth = '90vw';
 
   useEffect(() => {
-    const a = document.getElementById('card1');
-    const b = document.getElementById('card2');
-    const c = document.getElementById('card3');
-
+    const elems = ['card1', 'card2', 'card3'].map((id) =>
+      document.getElementById(id)
+    );
+    const w = elems[0].clientWidth;
     const d = document.getElementById('carousel');
-
-    const w = a.clientWidth;
-
     d.scrollLeft = w * 0.5;
 
-    a.addEventListener('ended', () => {
-      d.scrollTo({ left: w * 1.5, behavior: 'smooth' });
-      b.play();
-    });
-    b.addEventListener('ended', () => {
-      d.scrollTo({ left: w * 2.5, behavior: 'smooth' });
-      c.play();
-    });
-    c.addEventListener('ended', () => {
-      d.scrollTo({ left: w * 0.5, behavior: 'smooth' });
-      a.play();
-    });
+    for (const i in elems) {
+      const next = (i + 1) % elems.length;
+      elems[i].addEventListener('ended', () => {
+        d.scrollTo({ left: w * (next + 0.5), behavior: 'smooth' });
+        elems[next].play();
+      });
+    }
 
-    a.play();
+    elems[0].play();
   });
 
   const [t] = useTranslation();

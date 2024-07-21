@@ -57,6 +57,10 @@ function Home() {
   useEffect(() => {
     const mainText = document.getElementById('mainText');
 
+    setTimeout(() => {
+      mainText.style.opacity = 1;
+    }, 750);
+
     window.addEventListener('scroll', () => {
       setScrolled(window.scrollY > 10);
       if (window.scrollY > 10) {
@@ -69,10 +73,6 @@ function Home() {
         }, 750);
       }
     });
-
-    setTimeout(() => {
-      mainText.style.opacity = 1;
-    }, 750);
 
     const homeImage = document.getElementById('homeImage');
     homeImage.addEventListener('load', () => setLoaded(true));

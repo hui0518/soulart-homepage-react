@@ -8,6 +8,14 @@ const Div = styled.div`
   margin-top: 5rem;
   margin-bottom: 5rem;
   font-family: 'Noto Sans KR', sans-serif;
+
+  .title {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+    font-style: italic;
+  }
 `;
 
 function Buy() {
@@ -15,18 +23,8 @@ function Buy() {
 
   return (
     <Div id="buy">
-      <div
-        style={{
-          color: 'white',
-          fontSize: '50px',
-          fontWeight: 900,
-          fontFamily: `'Josefin Sans', sans-serif`,
-          fontStyle: 'italic',
-        }}
-      >
-        {t('title.buy')}
-      </div>
-      <img src="/assets/buy/elon.jpg" alt="melon" width="300px"></img>
+      <div className="title">{t('title.buy')}</div>
+      <img src="/assets/buy/elon.jpg" alt="melon" width="300px" />
       <h1>{t('buy.description')}</h1>
     </Div>
   );
