@@ -42,7 +42,7 @@ const Div = styled.div`
     opacity: 0;
     transition-property: opacity;
     transition-duration: 2s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
   }
 
   .scrolled {
@@ -63,16 +63,16 @@ function Home() {
         mainText.style.transitionDuration = '0.5s';
         mainText.style.opacity = 0;
       } else {
-        mainText.style.transitionDuration = '2s';
+        mainText.style.transitionDuration = '1s';
         setTimeout(() => {
           mainText.style.opacity = 1;
-        }, 1000);
+        }, 750);
       }
     });
 
     setTimeout(() => {
       mainText.style.opacity = 1;
-    }, 1000);
+    }, 750);
 
     const homeImage = document.getElementById('homeImage');
     homeImage.addEventListener('load', () => setLoaded(true));
