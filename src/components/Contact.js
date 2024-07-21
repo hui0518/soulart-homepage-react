@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 function Contact() {
   const sendEmail = (event) => {
     event.preventDefault();
@@ -16,6 +18,8 @@ function Contact() {
     window.location.href = mailLink;
   };
 
+  const [t] = useTranslation();
+
   return (
     <dialog id="my_modal_2" className="modal">
       <div
@@ -26,8 +30,8 @@ function Contact() {
           height: '600px',
         }}
       >
-        <h3 className="font-bold text-lg">Contact & Apply</h3>
-        <p className="py-4">If you want to join us, Please contact us.</p>
+        <h3 className="font-bold text-lg">{t('contact.title')}</h3>
+        <p className="py-4">{t('contact.description')}.</p>
 
         <label className="input input-bordered flex items-center gap-2">
           <img src="/assets/icons/signature.svg"></img>
@@ -35,7 +39,7 @@ function Contact() {
             style={{ marginLeft: '10px' }}
             type="text"
             className="grow"
-            placeholder="Name"
+            placeholder={t('contact.name')}
             id="name"
           />
         </label>
@@ -45,7 +49,7 @@ function Contact() {
             style={{ marginLeft: '10px' }}
             type="text"
             className="grow"
-            placeholder="Email"
+            placeholder={t('contact.email')}
             id="email"
           />
         </label>
@@ -55,7 +59,7 @@ function Contact() {
             style={{ marginLeft: '10px' }}
             type="text"
             className="grow"
-            placeholder="Company"
+            placeholder={t('contact.company')}
             id="company"
           />
         </label>
@@ -65,7 +69,7 @@ function Contact() {
             style={{ marginLeft: '10px' }}
             type="text"
             className="grow"
-            placeholder="Phone"
+            placeholder={t('contact.phone')}
             id="phone"
           />
         </label>
@@ -73,7 +77,7 @@ function Contact() {
         <textarea
           style={{ width: '100%', resize: 'none', height: '200px' }}
           className="textarea textarea-bordered"
-          placeholder="Memo"
+          placeholder={t('contact.memo')}
           id="memo"
         ></textarea>
 
@@ -82,7 +86,7 @@ function Contact() {
           onClick={sendEmail}
           style={{ marginTop: '20px' }}
         >
-          Send Email
+          {t('contact.button')}
         </button>
 
         <form method="dialog">

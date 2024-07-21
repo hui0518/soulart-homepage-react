@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Div = styled.div`
@@ -77,16 +78,16 @@ function Home() {
     homeImage.addEventListener('load', () => setLoaded(true));
   }, []);
 
+  const [t] = useTranslation();
+
   return (
     <Div id="home">
       <div
         id="wrapper"
         className={classNames('image', { scrolled, 'not-loaded': !loaded })}
       >
-        <div id="mainText">
-          Lorem Ipsum
-          <br />
-          Think Different
+        <div id="mainText" style={{ whiteSpace: 'pre-line' }}>
+          {t('slogan')}
         </div>
         <img
           src="/assets/home/dark.jpg"

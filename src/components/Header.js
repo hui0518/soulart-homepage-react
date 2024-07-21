@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 
 import i18n from '../locales/i18n';
+import { useTranslation } from 'react-i18next';
 
 const Div = styled.div`
   .navbar {
@@ -42,6 +43,7 @@ const Div = styled.div`
 function Header() {
   const [lang, setLang] = useState('ko');
   const [scrolled, setScrolled] = useState(false);
+  const [t] = useTranslation();
 
   const changeLanguage = () => {
     const nextLang = lang === 'ko' ? 'en' : 'ko';
@@ -123,7 +125,7 @@ function Header() {
                       });
                     }}
                   >
-                    {name}
+                    {t(`header.${id}`)}
                   </a>
                 </li>
               ))}
@@ -151,7 +153,7 @@ function Header() {
                     });
                   }}
                 >
-                  {name}
+                  {t(`header.${id}`)}
                 </a>
               </li>
             ))}

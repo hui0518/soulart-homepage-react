@@ -81,7 +81,7 @@ function Members() {
           zIndex: 1,
         }}
       >
-        Members
+        {t('title.members')}
       </div>
       <div
         style={{

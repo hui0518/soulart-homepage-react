@@ -1,7 +1,4 @@
 {
-  "header": {
-    "home": "호-무"
-  },
   "members": {
     "uzuki": "시마무라 우즈키",
     "rin": "시부야 린",
@@ -13,5 +10,39 @@
     "idolmaster": "아이돌마스터",
     "kaist": "한국과학기술원",
     "tesla": "테슬라"
+  },
+  "header": {
+    "home": "홈",
+    "about": "상세",
+    "members": "멤버",
+    "partners": "협력사",
+    "buy": "구매"
+  },
+  "title": {
+    "about": "상세 페이지",
+    "members": "멤버들",
+    "partners": "협력 컴패니",
+    "buy": "이건 꼭 사야돼"
+  },
+  "slogan": "슬로건 \n 입니다.",
+  "contact": {
+    "bubble": "연락",
+    "title": "연락 및 지원",
+    "description": "저희와 함께하실 분들은 연락 주세요",
+    "button": "메일 보내기",
+    "name": "이름",
+    "email": "이메일 주소",
+    "company": "회사명",
+    "phone": "전화번호",
+    "memo": "기타 메모"
+  },
+  "buy": {
+    "description": "머스크 멜론 사세요"
+  },
+  "footer": {
+    "representative": "대표: 유이가하마 유이",
+    "address": "주소: 대전광역시 유성구 대학로 291",
+    "phone": "전화번호: 010-1234-5678",
+    "email": "이메일: yuigahama@yui.com"
   }
 }

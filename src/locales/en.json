@@ -1,7 +1,4 @@
 {
-  "header": {
-    "home": "Home"
-  },
   "members": {
     "uzuki": "Uzuki Shimamura",
     "rin": "Rin Shibuya",
@@ -13,5 +10,39 @@
     "idolmaster": "idolm@ster",
     "kaist": "KAIST",
     "tesla": "Tesla"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "members": "Members",
+    "partners": "Partners",
+    "buy": "Buy"
+  },
+  "title": {
+    "about": "About",
+    "members": "Members",
+    "partners": "Partners",
+    "buy": "Buy"
+  },
+  "slogan": "Lorem Ipsum\nThink Different",
+  "contact": {
+    "bubble": "Contact",
+    "title": "Contact & Apply",
+    "description": "If you want to join us, Please contact us.",
+    "button": "Send Email",
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "phone": "Phone",
+    "memo": "Memo"
+  },
+  "buy": {
+    "description": "Buy Melon Musk"
+  },
+  "footer": {
+    "representative": "Representative: Yui Yuigahama",
+    "address": "Address: 291, Daehak-ro, Yuseong-gu, Daejeon, Republic of Korea",
+    "phone": "Tel: 010-1234-5678",
+    "email": "Mail: yuigahama@yui.com"
   }
 }

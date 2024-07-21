@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Div = styled.div`
@@ -44,6 +45,8 @@ function About() {
     a.play();
   });
 
+  const [t] = useTranslation();
+
   return (
     <Div id="about">
       <div
@@ -55,7 +58,7 @@ function About() {
           fontStyle: 'italic',
         }}
       >
-        About
+        {t('title.about')}
       </div>
 
       <div

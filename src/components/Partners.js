@@ -78,7 +78,7 @@ function Partners() {
           fontStyle: 'italic',
         }}
       >
-        Partners
+        {t('title.partners')}
       </div>
       <div
         style={{

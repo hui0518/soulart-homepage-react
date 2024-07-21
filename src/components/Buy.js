@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Div = styled.div`
@@ -10,6 +11,8 @@ const Div = styled.div`
 `;
 
 function Buy() {
+  const [t] = useTranslation();
+
   return (
     <Div id="buy">
       <div
@@ -21,10 +24,10 @@ function Buy() {
           fontStyle: 'italic',
         }}
       >
-        Buy Melon Musk
+        {t('title.buy')}
       </div>
       <img src="/assets/buy/elon.jpg" alt="melon" width="300px"></img>
-      <h1>Buy Melon Musk</h1>
+      <h1>{t('buy.description')}</h1>
     </Div>
   );
 }
