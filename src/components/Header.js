@@ -118,7 +118,7 @@ function Header() {
                     onClick={() => {
                       const elem = document.getElementById(id);
                       window.scrollTo({
-                        top: elem.offsetTop - 90,
+                        top: id === 'home' ? 0 : elem.offsetTop - 90,
                         behavior: 'smooth',
                       });
                     }}
@@ -138,7 +138,7 @@ function Header() {
                   onClick={() => {
                     const elem = document.getElementById(id);
                     window.scrollTo({
-                      top: elem.offsetTop - 90,
+                      top: id === 'home' ? 0 : elem.offsetTop - 90,
                       behavior: 'smooth',
                     });
                   }}
