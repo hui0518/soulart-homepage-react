@@ -6,12 +6,12 @@ import Members from './components/Members';
 import Partners from './components/Partners';
 import Buy from './components/Buy';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 import { motion } from 'framer-motion';
 
 window.addEventListener('scroll', () => {
   const a = document.getElementById('apply');
 
-  // console.log(window.scrollY);
   if (window.scrollY > 10) {
     a.style.opacity = 1;
   } else {
@@ -22,7 +22,9 @@ window.addEventListener('scroll', () => {
 function App() {
   return (
     <div className="App" style={{ paddingTop: '6rem' }}>
-      <motion.div
+      <motion.button
+        className="btn"
+        onClick={() => document.getElementById('my_modal_2').showModal()}
         whileHover={{ scale: 1.1 }}
         whileTap={{
           scale: 0.9,
@@ -30,7 +32,7 @@ function App() {
         id="apply"
         style={{
           position: 'fixed',
-          right: '10px',
+          left: '90vw',
           bottom: '20px',
           backgroundColor: 'rgb(30, 30, 30)',
           borderRadius: '10px',
@@ -43,7 +45,9 @@ function App() {
         }}
       >
         <div>contact</div>
-      </motion.div>
+      </motion.button>
+
+      <Contact />
 
       <Header />
 

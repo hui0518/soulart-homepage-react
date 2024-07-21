@@ -13,6 +13,8 @@ const Div = styled.div`
 
     z-index: 10;
 
+    width: 100vw;
+
     transition-duration: 0.4s;
     transition-property: background, border-radius, box-shadow, backdrop-filter,
       -webkit-backdrop-filter;
@@ -126,7 +128,7 @@ function Header() {
           >
             {buttons.map(({ name }) => (
               <li key={name}>
-                <a href="#about">{name}</a>
+                <a href="/">{name}</a>
               </li>
             ))}
           </ul>
