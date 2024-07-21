@@ -23,7 +23,7 @@ function Contact() {
         style={{
           backgroundColor: 'rgb(20, 20, 20)',
           borderRadius: '20px',
-          height: '700px',
+          height: '600px',
         }}
       >
         <h3 className="font-bold text-lg">Contact & Apply</h3>
@@ -77,8 +77,12 @@ function Contact() {
           id="memo"
         ></textarea>
 
-        <button className="btn" onClick={sendEmail}>
-          Email
+        <button
+          className="btn btn-active btn-primary"
+          onClick={sendEmail}
+          style={{ marginTop: '20px' }}
+        >
+          Send Email
         </button>
 
         <form method="dialog">

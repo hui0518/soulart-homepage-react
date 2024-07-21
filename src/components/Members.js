@@ -6,7 +6,7 @@ function Member({ name, image }) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      className="card bg-base-100 w-96 shadow-xl"
+      className="card"
       style={{
         display: 'flex',
         flexFlow: 'column',
@@ -16,6 +16,7 @@ function Member({ name, image }) {
         marginLeft: '10px',
         marginRight: '10px',
         background: 'none',
+        zIndex: 1,
       }}
     >
       <figure>
@@ -27,6 +28,7 @@ function Member({ name, image }) {
             height: '300px',
             objectFit: 'cover',
             borderRadius: '20px',
+            zIndex: 1,
           }}
         />
       </figure>
@@ -76,6 +78,7 @@ function Members() {
           fontWeight: 900,
           fontFamily: `'Josefin Sans', sans-serif`,
           fontStyle: 'italic',
+          zIndex: 1,
         }}
       >
         Members
@@ -88,6 +91,7 @@ function Members() {
           alignItems: 'center',
           width: '90%',
           justifyContent: 'center',
+          zIndex: 1,
         }}
       >
         {members.map(({ name, image }) => (

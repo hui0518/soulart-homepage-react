@@ -7,6 +7,10 @@ const Div = styled.div`
 
   margin-top: 5rem;
   margin-bottom: 5rem;
+
+  .mainVideo {
+    width: 90vw;
+  }
 `;
 
 function About() {
@@ -24,11 +28,11 @@ function About() {
         About
       </div>
       <video
+        className="mainVideo"
         src="/assets/about/video3.mp4"
         muted
         autoPlay
         loop
-        width="600px"
       ></video>
     </Div>
   );
