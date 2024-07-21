@@ -66,7 +66,7 @@ const Div = styled.div`
 function Partners() {
   const { t } = useTranslation();
   return (
-    <Div>
+    <Div id="partners">
       <div
         style={{
           marginTop: '30px',

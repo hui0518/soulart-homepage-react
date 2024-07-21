@@ -11,7 +11,7 @@ const Div = styled.div`
 
 function Buy() {
   return (
-    <Div>
+    <Div id="buy">
       <div
         style={{
           color: 'white',

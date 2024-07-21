@@ -58,19 +58,23 @@ function Header() {
   const buttons = [
     {
       name: 'Home',
+      id: 'home',
     },
     {
       name: 'About',
-      link: '#about',
+      id: 'about',
     },
     {
       name: 'Members',
+      id: 'members',
     },
     {
       name: 'Partners',
+      id: 'partners',
     },
     {
       name: 'Buy',
+      id: 'buy',
     },
   ];
 
@@ -108,9 +112,19 @@ function Header() {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2"
             >
-              {buttons.map(({ name }) => (
+              {buttons.map(({ name, id }) => (
                 <li key={name + '_dropdown'}>
-                  <a href="#about">{name}</a>
+                  <a
+                    onClick={() => {
+                      const a = document.getElementById(id);
+                      window.scrollTo({
+                        top: a.offsetTop - 90,
+                        behavior: 'smooth',
+                      });
+                    }}
+                  >
+                    {name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -126,9 +140,19 @@ function Header() {
               color: 'white',
             }}
           >
-            {buttons.map(({ name }) => (
+            {buttons.map(({ name, id }) => (
               <li key={name}>
-                <a href="/">{name}</a>
+                <a
+                  onClick={() => {
+                    const a = document.getElementById(id);
+                    window.scrollTo({
+                      top: a.offsetTop - 90,
+                      behavior: 'smooth',
+                    });
+                  }}
+                >
+                  {name}
+                </a>
               </li>
             ))}
           </ul>

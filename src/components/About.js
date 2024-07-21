@@ -45,7 +45,7 @@ function About() {
   });
 
   return (
-    <Div>
+    <Div id="about">
       <div
         style={{
           fontSize: '50px',

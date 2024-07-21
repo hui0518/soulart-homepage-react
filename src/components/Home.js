@@ -78,7 +78,7 @@ function Home() {
   }, []);
 
   return (
-    <Div>
+    <Div id="home">
       <div
         id="wrapper"
         className={classNames('image', { scrolled, 'not-loaded': !loaded })}
