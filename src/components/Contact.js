@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const Dialog = styled.dialog`
   .modal-box {
+    height: 600px;
     background-color: rgb(20, 20, 20);
     border-radius: 20px;
-    height: 600px;
   }
 
   input {
@@ -14,13 +14,13 @@ const Dialog = styled.dialog`
 
   textarea {
     width: 100%;
-    resize: none;
     height: 200px;
+    resize: none;
   }
 
   #submitButton {
-    margin-top: 20px;
     border-radius: 10px;
+    margin-top: 20px;
   }
 `;
 

@@ -29,18 +29,19 @@ const Div = styled.div`
   }
 
   #mainText {
-    font-family: Arvo, sans-serif;
-    font-weight: 400;
     font-size: 50px;
+    font-weight: 400;
+    font-family: Arvo, sans-serif;
     color: white;
+
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -75%);
     z-index: 5;
     white-space: pre-line;
-
     opacity: 0;
+
     transition-property: opacity;
     transition-duration: 2s;
     transition-timing-function: ease-in-out;
@@ -53,8 +54,8 @@ const Div = styled.div`
   #homeImage {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 20px;
+    object-fit: cover;
   }
 `;
 

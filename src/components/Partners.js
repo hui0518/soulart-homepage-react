@@ -3,14 +3,15 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const PartnerDiv = styled(motion.div)`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
   width: 200px;
   height: 300px;
   margin-left: 10px;
   margin-right: 10px;
   background: none;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 
   .partnerImage {
     width: 200px;
@@ -54,6 +55,7 @@ const partners = [
 
 const Div = styled.div`
   width: 100%;
+
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -61,19 +63,21 @@ const Div = styled.div`
   #title {
     margin-top: 30px;
     margin-bottom: 30px;
-    font-weight: 900;
+
     font-size: 50px;
-    color: white;
+    font-weight: 900;
     font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
     font-family: italic;
+    color: white;
   }
 
   #partnersContainer {
+    width: 90%;
+
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
     align-items: center;
-    width: 90%;
     justify-content: center;
   }
 `;

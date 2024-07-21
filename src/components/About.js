@@ -3,12 +3,12 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Div = styled.div`
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
   display: flex;
   flex-flow: column;
   align-items: center;
-
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 
   #carousel {
     width: 90vw;

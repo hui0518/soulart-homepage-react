@@ -8,13 +8,11 @@ import { useTranslation } from 'react-i18next';
 const Div = styled.div`
   .navbar {
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    top: 0;
-
-    z-index: 10;
-
     width: 100vw;
+    z-index: 10;
 
     transition-duration: 0.4s;
     transition-property: background, border-radius, box-shadow, backdrop-filter,
@@ -45,9 +43,9 @@ const Div = styled.div`
   }
 
   #desktopButtons {
-    font-family: 'Arvo', 'Noto Sans KR', sans-serif;
     font-size: 20px;
     font-weight: 400;
+    font-family: 'Arvo', 'Noto Sans KR', sans-serif;
     color: white;
   }
 `;

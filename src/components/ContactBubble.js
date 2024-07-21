@@ -5,19 +5,22 @@ const Div = styled.div`
   position: fixed;
   left: 95vw;
   top: 95vh;
-  transform: translate(-90%, -50%);
+
   width: 100px;
   height: 40px;
+
+  transform: translate(-90%, -50%);
   z-index: 10;
 
   #apply {
-    background-color: rgba(40, 40, 40, 1);
-    border-radius: 15px;
-    border: 2px solid rgb(50, 50, 50);
     width: 100%;
     height: 100%;
     line-height: 40px;
+    background-color: rgba(40, 40, 40, 1);
+    border-radius: 15px;
+    border: 2px solid rgb(50, 50, 50);
     opacity: 0;
+
     transition-property: opacity;
     transition-duration: 1.5s;
   }

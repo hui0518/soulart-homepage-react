@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const MemberDiv = styled(motion.div)`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
   width: 200px;
   height: 400px;
 
@@ -14,6 +10,10 @@ const MemberDiv = styled(motion.div)`
   margin-right: 10px;
   background: none;
   z-index: 1;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 `;
 
 function Member({ name, image }) {
@@ -65,24 +65,25 @@ const Div = styled.div`
   align-items: center;
 
   #title {
-    margin-top: 30px;
-    margin-bottom: 30px;
     font-size: 50px;
-    color: white;
     font-weight: 900;
     font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
     font-style: italic;
-    z-index: 1;
+    color: white;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   #membersContainer {
+    width: 90%;
+    color: white;
+
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    align-items: center;
-    width: 90%;
     justify-content: center;
-    z-index: 1;
+    align-items: center;
   }
 `;
 
