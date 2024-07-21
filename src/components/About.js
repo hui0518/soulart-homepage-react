@@ -17,8 +17,9 @@ const Div = styled.div`
 `;
 
 function About() {
-  const width = '500px';
-  const half = '250px';
+  const width = '85vw';
+  const half = '40vw';
+  const outerWidth = '90vw';
 
   useEffect(() => {
     const a = document.getElementById('card1');
@@ -27,18 +28,20 @@ function About() {
 
     const d = document.getElementById('carousel');
 
-    d.scrollLeft = 250;
+    const w = a.clientWidth;
+
+    d.scrollLeft = w * 0.5;
 
     a.addEventListener('ended', () => {
-      d.scrollTo({ left: 500, behavior: 'smooth' });
+      d.scrollTo({ left: w * 1.5, behavior: 'smooth' });
       b.play();
     });
     b.addEventListener('ended', () => {
-      d.scrollTo({ left: 1000, behavior: 'smooth' });
+      d.scrollTo({ left: w * 2.5, behavior: 'smooth' });
       c.play();
     });
     c.addEventListener('ended', () => {
-      d.scrollTo({ left: 250, behavior: 'smooth' });
+      d.scrollTo({ left: w * 0.5, behavior: 'smooth' });
       a.play();
     });
 
@@ -64,7 +67,7 @@ function About() {
       <div
         className="mainVideo carousel carousel-center space-x-4 p-4"
         id="carousel"
-        style={{ overflow: 'hidden' }}
+        style={{ overflow: 'hidden', width: outerWidth }}
       >
         <div className="carousel-item" style={{ width: half }}></div>
         <div className="carousel-item">
