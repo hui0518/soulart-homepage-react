@@ -46,7 +46,7 @@ function Buy() {
       >
         {t('title.buy')}
       </motion.div>
-      <img src="/assets/buy/elon.jpg" alt="melon" />
+      <img src="./assets/buy/elon.jpg" alt="melon" />
       <h1 className="description">{t('buy.description')}</h1>
     </Div>
   );

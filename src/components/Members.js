@@ -40,19 +40,19 @@ function Member({ name, image }) {
 const members = [
   {
     name: 'uzuki',
-    image: '/assets/members/uzuki.webp',
+    image: './assets/members/uzuki.webp',
   },
   {
     name: 'rin',
-    image: '/assets/members/rin.webp',
+    image: './assets/members/rin.webp',
   },
   {
     name: 'mio',
-    image: '/assets/members/mio.webp',
+    image: './assets/members/mio.webp',
   },
   {
     name: 'ikuyo',
-    image: '/assets/members/ikuyo.webp',
+    image: './assets/members/ikuyo.webp',
   },
 ];
 

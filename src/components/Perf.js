@@ -68,8 +68,8 @@ function Buy() {
       </motion.div>
 
       <div id="container">
-        <img src="/assets/perf/perf1.png" alt="Performance" />
-        <video src="/assets/perf/perf2.webm" muted autoPlay loop></video>
+        <img src="./assets/perf/perf1.png" alt="Performance" />
+        <video src="./assets/perf/perf2.webm" muted autoPlay loop></video>
       </div>
 
       <h1 className="description">{t('perf.description')}</h1>

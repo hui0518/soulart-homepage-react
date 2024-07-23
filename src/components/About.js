@@ -134,7 +134,7 @@ function About() {
           <video
             id="card1"
             className="mainVideo rounded-box"
-            src="/assets/about/1.mp4"
+            src="./assets/about/1.mp4"
             muted
             style={{
               width,
@@ -145,7 +145,7 @@ function About() {
           <video
             id="card2"
             className="mainVideo rounded-box"
-            src="/assets/about/2.mp4"
+            src="./assets/about/2.mp4"
             muted
             style={{
               width,
@@ -156,7 +156,7 @@ function About() {
           <video
             id="card3"
             className="mainVideo rounded-box"
-            src="/assets/about/3.mp4"
+            src="./assets/about/3.mp4"
             muted
             style={{
               width,

@@ -93,7 +93,7 @@ function Header() {
     <Div>
       <div className={classNames('navbar', { scrolled })}>
         <div className="navbar-start">
-          <img id="logo" src="/assets/logo.png" alt="company logo"></img>
+          <img id="logo" src="./assets/logo.png" alt="company logo"></img>
           <div className="dropdown">
             <div className="btn btn-ghost lg:hidden" tabIndex={0} role="button">
               <svg

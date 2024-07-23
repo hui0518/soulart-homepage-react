@@ -50,22 +50,22 @@ function Contact() {
     {
       id: 'name',
       placeholder: 'name',
-      icon: '/assets/icons/signature.svg',
+      icon: './assets/icons/signature.svg',
     },
     {
       id: 'company',
       placeholder: 'company',
-      icon: '/assets/icons/company.svg',
+      icon: './assets/icons/company.svg',
     },
     {
       id: 'email',
       placeholder: 'email',
-      icon: '/assets/icons/email.svg',
+      icon: './assets/icons/email.svg',
     },
     {
       id: 'phone',
       placeholder: 'phone',
-      icon: '/assets/icons/phone.svg',
+      icon: './assets/icons/phone.svg',
     },
   ];
 

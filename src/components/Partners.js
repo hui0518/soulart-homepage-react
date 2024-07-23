@@ -37,19 +37,19 @@ function Partner({ name, image }) {
 const partners = [
   {
     name: 'hololive',
-    image: '/assets/partners/hololive.jpg',
+    image: './assets/partners/hololive.jpg',
   },
   {
     name: 'idolmaster',
-    image: '/assets/partners/idolmaster.webp',
+    image: './assets/partners/idolmaster.webp',
   },
   {
     name: 'kaist',
-    image: '/assets/partners/kaist.jpg',
+    image: './assets/partners/kaist.jpg',
   },
   {
     name: 'tesla',
-    image: '/assets/partners/tesla.jpg',
+    image: './assets/partners/tesla.jpg',
   },
 ];
 
