@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 const Div = styled.div`
   position: fixed;
-  left: 95vw;
-  top: 95vh;
+  left: 100vw;
+  top: 100vh;
 
   width: 100px;
   height: 40px;
 
-  transform: translate(-90%, -50%);
+  transform: translate(calc(-100% - 40px), calc(-100% - 50px));
   z-index: 10;
 
   #apply {

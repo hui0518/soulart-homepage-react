@@ -37,7 +37,7 @@ function Contact() {
       })
       .join('');
 
-    const title = 'Contact to Soulart';
+    const title = 'Contact with Soulart';
     const soulartEmail = 'hui051875@gmail.com';
     const mailLink = `mailto:${soulartEmail}?subject=${title}&body=${body}`;
 

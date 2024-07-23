@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Div = styled.div`
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 200px;
+  margin-bottom: 200px;
 
   display: flex;
   flex-flow: column;
@@ -15,6 +15,7 @@ const Div = styled.div`
     font-weight: 900;
     font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
     font-style: italic;
+    margin-bottom: 50px;
   }
 
   .description {

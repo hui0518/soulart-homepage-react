@@ -55,6 +55,8 @@ const partners = [
 
 const Div = styled.div`
   width: 100%;
+  margin-top: 200px;
+  margin-bottom: 200px;
 
   display: flex;
   flex-flow: column;
@@ -62,7 +64,7 @@ const Div = styled.div`
 
   #title {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     font-size: 50px;
     font-weight: 900;

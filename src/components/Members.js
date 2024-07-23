@@ -62,6 +62,15 @@ const Div = styled.div`
   flex-flow: column;
   align-items: center;
 
+  margin-top: 200px;
+  margin-bottom: 200px;
+  height: 800px;
+
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
   #title {
     font-size: 50px;
     font-weight: 900;
@@ -70,7 +79,7 @@ const Div = styled.div`
     color: white;
 
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   #membersContainer {

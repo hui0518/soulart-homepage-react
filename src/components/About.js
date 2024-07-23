@@ -23,6 +23,7 @@ const Div = styled.div`
     font-weight: 900;
     font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
     font-style: italic;
+    margin-bottom: 50px;
   }
 
   #buttons {
@@ -32,12 +33,13 @@ const Div = styled.div`
   }
 
   .button {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     line-height: 40px;
     border-radius: 15px;
     margin-left: 8px;
     margin-right: 8px;
+    margin-top: 30px;
     background-color: black;
     font-family: Arvo, 'Noto Sans KR', sans-serif;
     color: white;
@@ -166,9 +168,7 @@ function About() {
           className={classNames('button', {
             active: cur === 0,
           })}
-        >
-          1
-        </motion.div>
+        ></motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{
@@ -179,9 +179,7 @@ function About() {
             active: cur === 1,
             inactive: cur !== 1,
           })}
-        >
-          2
-        </motion.div>
+        ></motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{
@@ -192,9 +190,7 @@ function About() {
             active: cur === 2,
             inactive: cur !== 2,
           })}
-        >
-          3
-        </motion.div>
+        ></motion.div>
       </div>
     </Div>
   );
