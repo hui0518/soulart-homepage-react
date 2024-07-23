@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hui0518.github.io/soulart-pages/static/css/main.68f90e9d.css",
+    "main.js": "/hui0518.github.io/soulart-pages/static/js/main.9256f60c.js",
+    "static/js/453.ff2933fd.chunk.js": "/hui0518.github.io/soulart-pages/static/js/453.ff2933fd.chunk.js",
+    "index.html": "/hui0518.github.io/soulart-pages/index.html",
+    "main.68f90e9d.css.map": "/hui0518.github.io/soulart-pages/static/css/main.68f90e9d.css.map",
+    "main.9256f60c.js.map": "/hui0518.github.io/soulart-pages/static/js/main.9256f60c.js.map",
+    "453.ff2933fd.chunk.js.map": "/hui0518.github.io/soulart-pages/static/js/453.ff2933fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68f90e9d.css",
+    "static/js/main.9256f60c.js"
+  ]
+}
