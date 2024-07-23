@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.dffb2a49.css",
-    "main.js": "/static/js/main.a3ae3c1c.js",
-    "static/js/453.ff2933fd.chunk.js": "/static/js/453.ff2933fd.chunk.js",
-    "index.html": "/index.html",
-    "main.dffb2a49.css.map": "/static/css/main.dffb2a49.css.map",
-    "main.a3ae3c1c.js.map": "/static/js/main.a3ae3c1c.js.map",
-    "453.ff2933fd.chunk.js.map": "/static/js/453.ff2933fd.chunk.js.map"
+    "main.css": "/hui0518.github.io/soulart-homepage-react/static/css/main.dffb2a49.css",
+    "main.js": "/hui0518.github.io/soulart-homepage-react/static/js/main.2be5f798.js",
+    "static/js/453.ff2933fd.chunk.js": "/hui0518.github.io/soulart-homepage-react/static/js/453.ff2933fd.chunk.js",
+    "index.html": "/hui0518.github.io/soulart-homepage-react/index.html",
+    "main.dffb2a49.css.map": "/hui0518.github.io/soulart-homepage-react/static/css/main.dffb2a49.css.map",
+    "main.2be5f798.js.map": "/hui0518.github.io/soulart-homepage-react/static/js/main.2be5f798.js.map",
+    "453.ff2933fd.chunk.js.map": "/hui0518.github.io/soulart-homepage-react/static/js/453.ff2933fd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dffb2a49.css",
-    "static/js/main.a3ae3c1c.js"
+    "static/js/main.2be5f798.js"
   ]
 }
