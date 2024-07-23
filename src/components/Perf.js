@@ -69,7 +69,13 @@ function Buy() {
 
       <div id="container">
         <img src="./assets/perf/perf1.png" alt="Performance" />
-        <video src="./assets/perf/perf2.webm" muted autoPlay loop></video>
+        <video
+          src="./assets/perf/perf2.webm"
+          muted
+          autoPlay
+          loop
+          playsInline
+        ></video>
       </div>
 
       <h1 className="description">{t('perf.description')}</h1>

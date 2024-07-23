@@ -102,9 +102,6 @@ function About() {
   const [cur, setCur] = useState(0);
 
   useEffect(() => {
-    const title = document.getElementById('title');
-    console.log(title);
-
     const buttons = ['button1', 'button2', 'button3'].map((b) =>
       document.getElementById(b)
     );
@@ -173,6 +170,7 @@ function About() {
               className="mainVideo rounded-box"
               src="./assets/about/1.mp4"
               muted
+              playsInline
               style={{
                 width,
               }}
@@ -188,6 +186,7 @@ function About() {
               className="mainVideo rounded-box"
               src="./assets/about/2.mp4"
               muted
+              playsInline
               style={{
                 width,
               }}
@@ -203,6 +202,7 @@ function About() {
               className="mainVideo rounded-box"
               src="./assets/about/3.mp4"
               muted
+              playsInline
               style={{
                 width,
               }}
