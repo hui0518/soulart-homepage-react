@@ -16,13 +16,15 @@
     "about": "About",
     "members": "Members",
     "partners": "Partners",
-    "buy": "Buy"
+    "buy": "Buy",
+    "perf": "Performance"
   },
   "title": {
     "about": "About",
     "members": "Members",
     "partners": "Partners",
-    "buy": "Buy"
+    "buy": "Buy",
+    "perf": "Performance"
   },
   "slogan": "Lorem Ipsum\nThink Different",
   "contact": {
@@ -44,5 +46,8 @@
     "address": "Address: 291, Daehak-ro, Yuseong-gu, Daejeon, Republic of Korea",
     "phone": "Tel: 010-1234-5678",
     "email": "Mail: yuigahama@yui.com"
+  },
+  "perf": {
+    "description": "Perfomance is very high and good"
   }
 }

@@ -65,7 +65,6 @@ const Div = styled.div`
   padding-top: 150px;
   padding-bottom: 150px;
 
-  background-color: rgb(30, 30, 30);
   display: flex;
   flex-flow: column;
   justify-content: center;

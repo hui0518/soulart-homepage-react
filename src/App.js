@@ -8,6 +8,7 @@ import Buy from './components/Buy';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import ContactBubble from './components/ContactBubble';
+import Perf from './components/Perf';
 
 window.addEventListener('scroll', () => {
   const contactBubble = document.getElementById('apply');
@@ -26,6 +27,8 @@ function App() {
       <Home />
 
       <About />
+
+      <Perf />
 
       <Members />
 

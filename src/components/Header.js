@@ -76,6 +76,9 @@ function Header() {
       id: 'about',
     },
     {
+      id: 'perf',
+    },
+    {
       id: 'members',
     },
     {

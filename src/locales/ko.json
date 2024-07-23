@@ -16,13 +16,15 @@
     "about": "상세",
     "members": "멤버",
     "partners": "협력사",
-    "buy": "구매"
+    "buy": "구매",
+    "perf": "성능"
   },
   "title": {
     "about": "상세 페이지",
     "members": "멤버들",
     "partners": "협력 컴패니",
-    "buy": "이건 꼭 사야돼"
+    "buy": "이건 꼭 사야돼",
+    "perf": "파호-만스"
   },
   "slogan": "슬로건 \n 입니다.",
   "contact": {
@@ -44,5 +46,8 @@
     "address": "주소: 대전광역시 유성구 대학로 291",
     "phone": "전화번호: 010-1234-5678",
     "email": "이메일: yuigahama@yui.com"
+  },
+  "perf": {
+    "description": "매우 좋은 파포만스"
   }
 }

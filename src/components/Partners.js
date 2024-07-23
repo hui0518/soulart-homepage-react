@@ -55,8 +55,10 @@ const partners = [
 
 const Div = styled.div`
   width: 100%;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-color: rgb(30, 30, 30);
 
   display: flex;
   flex-flow: column;
