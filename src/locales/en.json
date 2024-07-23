@@ -32,8 +32,8 @@
     "button": "Send Email",
     "name": "Name",
     "email": "Email",
-    "company": "Company",
-    "phone": "Phone",
+    "company": "Company (Optional)",
+    "phone": "Phone (Optional)",
     "memo": "Memo"
   },
   "buy": {

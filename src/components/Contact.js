@@ -53,14 +53,14 @@ function Contact() {
       icon: '/assets/icons/signature.svg',
     },
     {
-      id: 'email',
-      placeholder: 'email',
-      icon: '/assets/icons/email.svg',
-    },
-    {
       id: 'company',
       placeholder: 'company',
       icon: '/assets/icons/company.svg',
+    },
+    {
+      id: 'email',
+      placeholder: 'email',
+      icon: '/assets/icons/email.svg',
     },
     {
       id: 'phone',
