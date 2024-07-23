@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/soulart-pages/static/css/main.68f90e9d.css",
-    "main.js": "/soulart-pages/static/js/main.1d8aa0f9.js",
-    "static/js/453.ff2933fd.chunk.js": "/soulart-pages/static/js/453.ff2933fd.chunk.js",
-    "index.html": "/soulart-pages/index.html",
-    "main.68f90e9d.css.map": "/soulart-pages/static/css/main.68f90e9d.css.map",
-    "main.1d8aa0f9.js.map": "/soulart-pages/static/js/main.1d8aa0f9.js.map",
-    "453.ff2933fd.chunk.js.map": "/soulart-pages/static/js/453.ff2933fd.chunk.js.map"
+    "main.css": "/soulart-homepage-react/static/css/main.68f90e9d.css",
+    "main.js": "/soulart-homepage-react/static/js/main.6d486713.js",
+    "static/js/453.ff2933fd.chunk.js": "/soulart-homepage-react/static/js/453.ff2933fd.chunk.js",
+    "index.html": "/soulart-homepage-react/index.html",
+    "main.68f90e9d.css.map": "/soulart-homepage-react/static/css/main.68f90e9d.css.map",
+    "main.6d486713.js.map": "/soulart-homepage-react/static/js/main.6d486713.js.map",
+    "453.ff2933fd.chunk.js.map": "/soulart-homepage-react/static/js/453.ff2933fd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68f90e9d.css",
-    "static/js/main.1d8aa0f9.js"
+    "static/js/main.6d486713.js"
   ]
 }
