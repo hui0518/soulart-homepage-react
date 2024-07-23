@@ -88,7 +88,19 @@ function Partners() {
   const { t } = useTranslation();
   return (
     <Div id="partners">
-      <div id="title">{t('title.partners')}</div>
+      <motion.div
+        id="title"
+        initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
+        transition={{
+          ease: 'easeInOut',
+          duration: 0.7,
+          delay: 0.5,
+        }}
+        viewport={{ once: true }}
+        whileInView={{ transform: 'translate(0, 0)', opacity: 1 }}
+      >
+        {t('title.partners')}
+      </motion.div>
       <div id="partnersContainer">
         {partners.map(({ name, image }) => (
           <Partner name={t(`partners.${name}`)} image={image} key={name} />

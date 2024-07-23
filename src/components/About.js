@@ -5,20 +5,18 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Div = styled.div`
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-
+  margin-top: 200px;
+  margin-bottom: 200px;
   display: flex;
   flex-flow: column;
   align-items: center;
 
   #carousel {
-    width: 90vw;
-    height: 500px;
     overflow: hidden;
+    width: 70vw;
   }
 
-  .title {
+  #title {
     font-size: 50px;
     font-weight: 900;
     font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
@@ -59,20 +57,18 @@ const Div = styled.div`
   .active {
     background-color: grey;
   }
-
-  .carousel-item {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 `;
 
 function About() {
-  const width = '85vw';
-  const half = '40vw';
+  const width = '70vw';
+  const half = '35vw';
 
   const [cur, setCur] = useState(0);
 
   useEffect(() => {
+    const title = document.getElementById('title');
+    console.log(title);
+
     const buttons = ['button1', 'button2', 'button3'].map((b) =>
       document.getElementById(b)
     );
@@ -115,7 +111,19 @@ function About() {
 
   return (
     <Div id="about">
-      <div className="title">{t('title.about')}</div>
+      <motion.div
+        id="title"
+        initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
+        transition={{
+          ease: 'easeInOut',
+          duration: 0.7,
+          delay: 0.5,
+        }}
+        viewport={{ once: true }}
+        whileInView={{ transform: 'translate(0, 0)', opacity: 1 }}
+      >
+        {t('title.about')}
+      </motion.div>
 
       <div
         id="carousel"

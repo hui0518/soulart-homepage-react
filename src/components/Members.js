@@ -62,9 +62,8 @@ const Div = styled.div`
   flex-flow: column;
   align-items: center;
 
-  margin-top: 200px;
-  margin-bottom: 200px;
-  height: 800px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 
   background-color: rgb(30, 30, 30);
   display: flex;
@@ -98,7 +97,19 @@ function Members() {
   const { t } = useTranslation();
   return (
     <Div id="members">
-      <div id="title">{t('title.members')}</div>
+      <motion.div
+        id="title"
+        initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
+        transition={{
+          ease: 'easeInOut',
+          duration: 0.7,
+          delay: 0.5,
+        }}
+        viewport={{ once: true }}
+        whileInView={{ transform: 'translate(0, 0)', opacity: 1 }}
+      >
+        {t('title.members')}
+      </motion.div>
       <div id="membersContainer">
         {members.map(({ name, image }) => (
           <Member name={t(`members.${name}`)} image={image} key={name} />
