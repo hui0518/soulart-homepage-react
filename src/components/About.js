@@ -11,14 +11,14 @@ const Div = styled.div`
   flex-flow: column;
   align-items: center;
 
-  #carousel {
+  .carousel {
     overflow: hidden;
     width: 70vw;
-  }
 
-  .carousel-item {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    &-item {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
   }
 
   #title {
@@ -63,7 +63,7 @@ const Div = styled.div`
     background-color: grey;
   }
 
-  .leftUp {
+  .left-up {
     position: absolute;
     left: 15px;
     top: 10px;
@@ -79,7 +79,7 @@ const Div = styled.div`
     }
   }
 
-  .leftDown {
+  .left-down {
     position: absolute;
     left: 15px;
     bottom: 10px;
@@ -92,6 +92,10 @@ const Div = styled.div`
       font-size: 16px;
       bottom: -30px;
     }
+  }
+
+  .video-wrapper {
+    position: relative;
   }
 `;
 
@@ -142,6 +146,27 @@ function About() {
 
   const [t] = useTranslation();
 
+  const videos = [
+    {
+      id: 'card1',
+      image: './assets/about/1.mp4',
+      up: t('about.leftup1'),
+      down: t('about.leftdown1'),
+    },
+    {
+      id: 'card2',
+      image: './assets/about/2.mp4',
+      up: t('about.leftup2'),
+      down: t('about.leftdown2'),
+    },
+    {
+      id: 'card3',
+      image: './assets/about/3.mp4',
+      up: t('about.leftup3'),
+      down: t('about.leftdown3'),
+    },
+  ];
+
   return (
     <Div id="about">
       <motion.div
@@ -163,90 +188,39 @@ function About() {
         className="mainVideo carousel carousel-center space-x-4 p-4"
       >
         <div className="carousel-item" style={{ width: half }}></div>
-        <div className="carousel-item">
-          <div style={{ position: 'relative' }}>
-            <video
-              id="card1"
-              className="mainVideo rounded-box"
-              src="./assets/about/1.mp4"
-              muted
-              playsInline
-              style={{
-                width,
-              }}
-            ></video>
-            <div className="leftUp">{t('about.leftup1')}</div>
-            <div className="leftDown">{t('about.leftdown1')}</div>
+
+        {videos.map(({ id, image, up, down }) => (
+          <div key={id} className="carousel-item">
+            <div className="video-wrapper">
+              <video
+                id={id}
+                className="mainVideo rounded-box"
+                src={image}
+                muted
+                playsInline
+                style={{
+                  width,
+                }}
+              ></video>
+              <div className="left-up">{up}</div>
+              <div className="left-down">{down}</div>
+            </div>
           </div>
-        </div>
-        <div className="carousel-item">
-          <div style={{ position: 'relative' }}>
-            <video
-              id="card2"
-              className="mainVideo rounded-box"
-              src="./assets/about/2.mp4"
-              muted
-              playsInline
-              style={{
-                width,
-              }}
-            ></video>
-            <div className="leftUp">{t('about.leftup2')}</div>
-            <div className="leftDown">{t('about.leftdown2')}</div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div style={{ position: 'relative' }}>
-            <video
-              id="card3"
-              className="mainVideo rounded-box"
-              src="./assets/about/3.mp4"
-              muted
-              playsInline
-              style={{
-                width,
-              }}
-            ></video>
-            <div className="leftUp">{t('about.leftup3')}</div>
-            <div className="leftDown">{t('about.leftdown3')}</div>
-          </div>
-        </div>
+        ))}
+
         <div className="carousel-item" style={{ width: half }}></div>
       </div>
 
       <div id="buttons">
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{
-            scale: 0.9,
-          }}
-          id="button1"
-          className={classNames('button', {
-            active: cur === 0,
-          })}
-        ></motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{
-            scale: 0.95,
-          }}
-          id="button2"
-          className={classNames('button', {
-            active: cur === 1,
-            inactive: cur !== 1,
-          })}
-        ></motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{
-            scale: 0.9,
-          }}
-          id="button3"
-          className={classNames('button', {
-            active: cur === 2,
-            inactive: cur !== 2,
-          })}
-        ></motion.div>
+        {[1, 2, 3].map((i) => (
+          <motion.div
+            key={i}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            id={`button${i}`}
+            className={classNames('button', { active: cur === i - 1 })}
+          />
+        ))}
       </div>
     </Div>
   );

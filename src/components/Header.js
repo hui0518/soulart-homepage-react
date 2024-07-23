@@ -17,6 +17,12 @@ const Div = styled.div`
     transition-duration: 0.4s;
     transition-property: background, border-radius, box-shadow, backdrop-filter,
       -webkit-backdrop-filter;
+
+    &-logo {
+      width: 100px;
+      margin-left: 20px;
+      margin-right: 10px;
+    }
   }
 
   .scrolled {
@@ -35,12 +41,6 @@ const Div = styled.div`
       background: none;
       border: none;
     }
-  }
-
-  #logo {
-    width: 100px;
-    margin-left: 20px;
-    margin-right: 10px;
   }
 
   #desktopButtons {
@@ -93,7 +93,11 @@ function Header() {
     <Div>
       <div className={classNames('navbar', { scrolled })}>
         <div className="navbar-start">
-          <img id="logo" src="./assets/logo.png" alt="company logo"></img>
+          <img
+            className="navbar-logo"
+            src="./assets/logo.png"
+            alt="company logo"
+          />
           <div className="dropdown">
             <div className="btn btn-ghost lg:hidden" tabIndex={0} role="button">
               <svg
@@ -116,7 +120,7 @@ function Header() {
               tabIndex={0}
             >
               {buttons.map(({ id }) => (
-                <li key={id + '_dropdown'}>
+                <li key={`${id}_dropdown`}>
                   <a
                     onClick={() => {
                       const elem = document.getElementById(id);

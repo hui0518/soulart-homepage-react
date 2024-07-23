@@ -19,7 +19,7 @@ const Dialog = styled.dialog`
     resize: none;
   }
 
-  #submitButton {
+  #submit-button {
     border-radius: 10px;
     margin-top: 20px;
   }
@@ -70,7 +70,7 @@ function Contact() {
   ];
 
   return (
-    <Dialog id="my_modal_2" className="modal">
+    <Dialog id="contact-modal" className="modal">
       <div className="modal-box">
         <h3 className="font-bold text-lg">{t('contact.title')}</h3>
         <p className="py-4">{t('contact.description')}.</p>
@@ -80,7 +80,7 @@ function Contact() {
             key={id}
             className="input input-bordered flex items-center gap-2"
           >
-            <img src={icon}></img>
+            <img src={icon} />
             <input
               id={id}
               className="grow"
@@ -97,7 +97,7 @@ function Contact() {
         />
 
         <motion.button
-          id="submitButton"
+          id="submit-button"
           className="btn btn-active btn-primary"
           onClick={sendEmail}
           whileHover={{ scale: 1.1 }}
