@@ -16,6 +16,11 @@ const Div = styled.div`
     width: 70vw;
   }
 
+  .carousel-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   #title {
     font-size: 50px;
     font-weight: 900;
@@ -56,6 +61,37 @@ const Div = styled.div`
 
   .active {
     background-color: grey;
+  }
+
+  .leftUp {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-size: 50px;
+    font-family: Arvo, 'Noto Sans KR', sans-serif;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    @media screen and (max-width: 800px) {
+      font-size: 16px;
+      top: -30px;
+    }
+  }
+
+  .leftDown {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    font-size: 50px;
+    font-family: Arvo, 'Noto Sans KR', sans-serif;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    @media screen and (max-width: 800px) {
+      font-size: 16px;
+      bottom: -30px;
+    }
   }
 `;
 
@@ -131,37 +167,49 @@ function About() {
       >
         <div className="carousel-item" style={{ width: half }}></div>
         <div className="carousel-item">
-          <video
-            id="card1"
-            className="mainVideo rounded-box"
-            src="./assets/about/1.mp4"
-            muted
-            style={{
-              width,
-            }}
-          ></video>
+          <div style={{ position: 'relative' }}>
+            <video
+              id="card1"
+              className="mainVideo rounded-box"
+              src="./assets/about/1.mp4"
+              muted
+              style={{
+                width,
+              }}
+            ></video>
+            <div className="leftUp">Text Up Left 1</div>
+            <div className="leftDown">Text Down Left 1</div>
+          </div>
         </div>
         <div className="carousel-item">
-          <video
-            id="card2"
-            className="mainVideo rounded-box"
-            src="./assets/about/2.mp4"
-            muted
-            style={{
-              width,
-            }}
-          ></video>
+          <div style={{ position: 'relative' }}>
+            <video
+              id="card2"
+              className="mainVideo rounded-box"
+              src="./assets/about/2.mp4"
+              muted
+              style={{
+                width,
+              }}
+            ></video>
+            <div className="leftUp">Text Up Left 2</div>
+            <div className="leftDown">Text Down Left 2</div>
+          </div>
         </div>
         <div className="carousel-item">
-          <video
-            id="card3"
-            className="mainVideo rounded-box"
-            src="./assets/about/3.mp4"
-            muted
-            style={{
-              width,
-            }}
-          ></video>
+          <div style={{ position: 'relative' }}>
+            <video
+              id="card3"
+              className="mainVideo rounded-box"
+              src="./assets/about/3.mp4"
+              muted
+              style={{
+                width,
+              }}
+            ></video>
+            <div className="leftUp">Text Up Left 3</div>
+            <div className="leftDown">Text Down Left 3</div>
+          </div>
         </div>
         <div className="carousel-item" style={{ width: half }}></div>
       </div>
