@@ -49,5 +49,13 @@
   },
   "perf": {
     "description": "Perfomance is very high and good"
+  },
+  "abuot": {
+    "leftup1": "Up Left 1",
+    "leftdown1": "Up Down 1",
+    "leftup2": "Up Left 2",
+    "leftdown2": "Up Down 2",
+    "leftup3": "Up Left 3",
+    "leftdown3": "Up Down 3"
   }
 }

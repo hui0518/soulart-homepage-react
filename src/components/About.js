@@ -177,8 +177,8 @@ function About() {
                 width,
               }}
             ></video>
-            <div className="leftUp">Text Up Left 1</div>
-            <div className="leftDown">Text Down Left 1</div>
+            <div className="leftUp">{t('about.leftup1')}</div>
+            <div className="leftDown">{t('about.leftdown1')}</div>
           </div>
         </div>
         <div className="carousel-item">
@@ -192,8 +192,8 @@ function About() {
                 width,
               }}
             ></video>
-            <div className="leftUp">Text Up Left 2</div>
-            <div className="leftDown">Text Down Left 2</div>
+            <div className="leftUp">{t('about.leftup2')}</div>
+            <div className="leftDown">{t('about.leftdown2')}</div>
           </div>
         </div>
         <div className="carousel-item">
@@ -207,8 +207,8 @@ function About() {
                 width,
               }}
             ></video>
-            <div className="leftUp">Text Up Left 3</div>
-            <div className="leftDown">Text Down Left 3</div>
+            <div className="leftUp">{t('about.leftup3')}</div>
+            <div className="leftDown">{t('about.leftdown3')}</div>
           </div>
         </div>
         <div className="carousel-item" style={{ width: half }}></div>

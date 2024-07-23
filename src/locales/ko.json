@@ -49,5 +49,13 @@
   },
   "perf": {
     "description": "매우 좋은 파포만스"
+  },
+  "abuot": {
+    "leftup1": "위 왼 1",
+    "leftdown1": "아래 왼 1",
+    "leftup2": "위 왼 2",
+    "leftdown2": "아래 왼 2",
+    "leftup3": "위 왼 3",
+    "leftdown3": "아래 왼 3"
   }
 }
