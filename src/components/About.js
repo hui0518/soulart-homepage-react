@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import settings from '../settings.json';
 
 const Div = styled.div`
   margin-top: 200px;
@@ -146,27 +147,6 @@ function About() {
 
   const [t] = useTranslation();
 
-  const videos = [
-    {
-      id: 'card1',
-      image: './assets/about/1.mp4',
-      up: t('about.leftup1'),
-      down: t('about.leftdown1'),
-    },
-    {
-      id: 'card2',
-      image: './assets/about/2.mp4',
-      up: t('about.leftup2'),
-      down: t('about.leftdown2'),
-    },
-    {
-      id: 'card3',
-      image: './assets/about/3.mp4',
-      up: t('about.leftup3'),
-      down: t('about.leftdown3'),
-    },
-  ];
-
   return (
     <Div id="about">
       <motion.div
@@ -189,7 +169,7 @@ function About() {
       >
         <div className="carousel-item" style={{ width: half }}></div>
 
-        {videos.map(({ id, image, up, down }) => (
+        {settings.videos.map(({ id, image, up, down }) => (
           <div key={id} className="carousel-item">
             <div className="video-wrapper">
               <video
@@ -202,8 +182,8 @@ function About() {
                   width,
                 }}
               ></video>
-              <div className="left-up">{up}</div>
-              <div className="left-down">{down}</div>
+              <div className="left-up">{t(up)}</div>
+              <div className="left-down">{t(down)}</div>
             </div>
           </div>
         ))}

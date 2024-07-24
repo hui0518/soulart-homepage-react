@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+import settings from '../settings';
+
 const MemberDiv = styled(motion.div)`
   width: 200px;
   height: 400px;
@@ -36,25 +38,6 @@ function Member({ name, image }) {
     </MemberDiv>
   );
 }
-
-const members = [
-  {
-    name: 'uzuki',
-    image: './assets/members/uzuki.webp',
-  },
-  {
-    name: 'rin',
-    image: './assets/members/rin.webp',
-  },
-  {
-    name: 'mio',
-    image: './assets/members/mio.webp',
-  },
-  {
-    name: 'ikuyo',
-    image: './assets/members/ikuyo.webp',
-  },
-];
 
 const Div = styled.div`
   width: 100%;
@@ -110,7 +93,7 @@ function Members() {
         {t('title.members')}
       </motion.div>
       <div id="membersContainer">
-        {members.map(({ name, image }) => (
+        {settings.members.map(({ name, image }) => (
           <Member name={t(`members.${name}`)} image={image} key={name} />
         ))}
       </div>

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import settings from '../settings.json';
 
 const PartnerDiv = styled(motion.div)`
   width: 200px;
@@ -33,25 +34,6 @@ function Partner({ name, image }) {
     </PartnerDiv>
   );
 }
-
-const partners = [
-  {
-    name: 'hololive',
-    image: './assets/partners/hololive.jpg',
-  },
-  {
-    name: 'idolmaster',
-    image: './assets/partners/idolmaster.webp',
-  },
-  {
-    name: 'kaist',
-    image: './assets/partners/kaist.jpg',
-  },
-  {
-    name: 'tesla',
-    image: './assets/partners/tesla.jpg',
-  },
-];
 
 const Div = styled.div`
   width: 100%;
@@ -104,7 +86,7 @@ function Partners() {
         {t('title.partners')}
       </motion.div>
       <div id="partnersContainer">
-        {partners.map(({ name, image }) => (
+        {settings.partners.map(({ name, image }) => (
           <Partner name={t(`partners.${name}`)} image={image} key={name} />
         ))}
       </div>

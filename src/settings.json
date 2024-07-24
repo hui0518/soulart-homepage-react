@@ -1,0 +1,58 @@
+{
+  "members": [
+    {
+      "name": "uzuki",
+      "image": "./assets/members/uzuki.webp"
+    },
+    {
+      "name": "rin",
+      "image": "./assets/members/rin.webp"
+    },
+    {
+      "name": "mio",
+      "image": "./assets/members/mio.webp"
+    },
+    {
+      "name": "ikuyo",
+      "image": "./assets/members/ikuyo.webp"
+    }
+  ],
+  "partners": [
+    {
+      "name": "hololive",
+      "image": "./assets/partners/hololive.jpg"
+    },
+    {
+      "name": "idolmaster",
+      "image": "./assets/partners/idolmaster.webp"
+    },
+    {
+      "name": "kaist",
+      "image": "./assets/partners/kaist.jpg"
+    },
+    {
+      "name": "tesla",
+      "image": "./assets/partners/tesla.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "id": "card1",
+      "image": "./assets/about/1.mp4",
+      "up": "about.leftup1",
+      "down": "about.leftdown1"
+    },
+    {
+      "id": "card2",
+      "image": "./assets/about/2.mp4",
+      "up": "about.leftup2",
+      "down": "about.leftdown2"
+    },
+    {
+      "id": "card3",
+      "image": "./assets/about/3.mp4",
+      "up": "about.leftup3",
+      "down": "about.leftdown3"
+    }
+  ]
+}
