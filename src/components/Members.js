@@ -8,10 +8,6 @@ const MemberDiv = styled(motion.div)`
   width: 200px;
   height: 400px;
 
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
   margin-left: 10px;
   margin-right: 10px;
   background: none;
@@ -32,10 +28,8 @@ const MemberDiv = styled(motion.div)`
 
 function Member({ name, image }) {
   return (
-    <MemberDiv whileHover={{ scale: 1.05 }} className="card">
-      <figure>
-        <img className="member-image" src={image} alt={name} />
-      </figure>
+    <MemberDiv whileHover={{ scale: 1.05 }} className="card column">
+      <img className="member-image" src={image} alt={name} />
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
       </div>
@@ -45,21 +39,6 @@ function Member({ name, image }) {
 
 const Div = styled.div`
   width: 100%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
-  padding-top: 150px;
-  padding-bottom: 150px;
-
-  @media screen and (max-width: 480px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
 
   #title {
     margin-top: 30px;
@@ -69,19 +48,14 @@ const Div = styled.div`
   #members-container {
     width: 90%;
     color: white;
-
-    display: flex;
-    flex-flow: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
 `;
 
 function Members() {
   const { t } = useTranslation();
   return (
-    <Div id="members">
+    <Div id="members" className="column page-padding">
       <motion.div
         id="title"
         className="page-title"
@@ -96,7 +70,7 @@ function Members() {
       >
         {t('title.members')}
       </motion.div>
-      <div id="members-container">
+      <div id="members-container" className="row">
         {settings.members.map(({ name, image }) => (
           <Member name={t(`members.${name}`)} image={image} key={name} />
         ))}

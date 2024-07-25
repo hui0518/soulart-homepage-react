@@ -7,9 +7,6 @@ const Div = styled.div`
   width: 100%;
   height: 100vh;
 
-  display: flex;
-  flex-flow: column;
-  align-items: center;
   padding-top: 10px;
   padding-bottom: 20px;
 
@@ -27,7 +24,7 @@ const Div = styled.div`
   #mainText {
     font-size: 50px;
     font-weight: 400;
-    font-family: Arvo, 'Noto Sans KR', sans-serif;
+    font-family: var(--arvo);
     color: white;
 
     position: absolute;
@@ -73,7 +70,11 @@ function Home() {
   const [t] = useTranslation();
 
   return (
-    <Div id="home" style={{ height: window.innerHeight - 100 }}>
+    <Div
+      id="home"
+      style={{ height: window.innerHeight - 100 }}
+      className="column"
+    >
       <div id="mainText">{t('slogan')}</div>
       <img
         className={classNames('image', { scrolled })}

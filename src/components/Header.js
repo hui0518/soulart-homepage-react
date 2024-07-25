@@ -13,10 +13,7 @@ const Div = styled.div`
     right: 0;
     width: 100vw;
     z-index: 10;
-
-    transition-duration: 0.4s;
-    transition-property: background, border-radius, box-shadow, backdrop-filter,
-      -webkit-backdrop-filter;
+    transition: all 0.4s ease-in-out;
 
     &-logo {
       width: 100px;
@@ -46,7 +43,7 @@ const Div = styled.div`
   #desktopButtons {
     font-size: 20px;
     font-weight: 400;
-    font-family: 'Arvo', 'Noto Sans KR', sans-serif;
+    font-family: var(--arvo);
     color: white;
   }
 `;

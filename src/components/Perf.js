@@ -4,29 +4,9 @@ import { motion } from 'framer-motion';
 
 const Div = styled.div`
   background-color: rgb(30, 30, 30);
-  width: 100%;
-  padding-top: 200px;
-  padding-bottom: 200px;
-
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
-  @media screen and (max-width: 480px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  .description {
-    font-family: 'Noto Sans KR', sans-serif;
-  }
 
   #container {
     width: 90vw;
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
     margin-top: 50px;
     margin-bottom: 20px;
 
@@ -45,7 +25,7 @@ function Buy() {
   const [t] = useTranslation();
 
   return (
-    <Div id="perf">
+    <Div id="perf" className="page-padding column">
       <motion.div
         id="title"
         className="page-title"
@@ -61,7 +41,7 @@ function Buy() {
         {t('title.perf')}
       </motion.div>
 
-      <div id="container">
+      <div id="container" className="row">
         <img src="./assets/perf/perf1.png" alt="Performance" />
         <video src="./assets/perf/perf2.webm" muted autoPlay loop playsInline />
       </div>

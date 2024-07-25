@@ -11,12 +11,18 @@ import ContactBubble from './components/ContactBubble';
 import Perf from './components/Perf';
 import BuyPopup from './components/BuyPopup';
 
-const vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty(`--vh`, `${vh}`);
+import styled from 'styled-components';
+
+const Div = styled.div`
+  --arvo: Arvo, 'Noto Sans KR', sans-serif;
+  --sans: 'Noto Sans KR', sans-serif;
+
+  font-family: var() (--sans);
+`;
 
 function App() {
   return (
-    <div className="App">
+    <Div className="App">
       <Contact />
 
       <ContactBubble />
@@ -38,7 +44,7 @@ function App() {
       <Buy />
 
       <Footer />
-    </div>
+    </Div>
   );
 }
 

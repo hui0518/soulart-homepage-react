@@ -3,24 +3,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Div = styled.div`
-  padding-top: 200px;
-  padding-bottom: 200px;
-
-  @media screen and (max-width: 480px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
   #title {
     margin-bottom: 50px;
-  }
-
-  .description {
-    font-family: 'Noto Sans KR', sans-serif;
   }
 
   img {
@@ -40,7 +24,7 @@ function Buy() {
   const [t] = useTranslation();
 
   return (
-    <Div id="buy">
+    <Div id="buy" className="column page-padding">
       <motion.div
         id="title"
         className="page-title"

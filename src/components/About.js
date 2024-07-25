@@ -6,17 +6,9 @@ import { motion } from 'framer-motion';
 import settings from '../settings.json';
 
 const Div = styled.div`
-  padding-top: 200px;
-  padding-bottom: 200px;
-
-  @media screen and (max-width: 480px) {
-    padding-top: 100px;
-    padding-bottom: 150px;
+  #buttons {
+    margin-top: 30px;
   }
-
-  display: flex;
-  flex-flow: column;
-  align-items: center;
 
   .carousel {
     overflow: hidden;
@@ -32,12 +24,6 @@ const Div = styled.div`
     margin-bottom: 50px;
   }
 
-  #buttons {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-  }
-
   .button {
     width: 30px;
     height: 30px;
@@ -45,9 +31,7 @@ const Div = styled.div`
     border-radius: 15px;
     margin-left: 8px;
     margin-right: 8px;
-    margin-top: 30px;
     background-color: black;
-    font-family: Arvo, 'Noto Sans KR', sans-serif;
     color: white;
 
     background-color: rgb(30, 30, 30);
@@ -71,7 +55,7 @@ const Div = styled.div`
     left: 15px;
     top: 10px;
     font-size: 50px;
-    font-family: Arvo, 'Noto Sans KR', sans-serif;
+    font-family: var(--arvo);
 
     padding-left: 5px;
     padding-right: 5px;
@@ -87,7 +71,7 @@ const Div = styled.div`
     left: 15px;
     bottom: 10px;
     font-size: 50px;
-    font-family: Arvo, 'Noto Sans KR', sans-serif;
+    font-family: var(--arvo);
 
     padding-left: 5px;
     padding-right: 5px;
@@ -150,7 +134,7 @@ function About() {
   const [t] = useTranslation();
 
   return (
-    <Div id="about">
+    <Div id="about" className="column page-padding">
       <motion.div
         id="title"
         className="page-title"
@@ -196,7 +180,7 @@ function About() {
         <div className="carousel-item" style={{ width: half }}></div>
       </div>
 
-      <div id="buttons">
+      <div id="buttons" className="row">
         {[1, 2, 3].map((i) => (
           <motion.div
             key={i}

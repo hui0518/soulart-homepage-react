@@ -11,10 +11,6 @@ const PartnerDiv = styled(motion.div)`
   margin-right: 10px;
   background: none;
 
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
   @media screen and (max-width: 480px) {
     width: 40vw;
   }
@@ -29,7 +25,7 @@ const PartnerDiv = styled(motion.div)`
 
 function Partner({ name, image }) {
   return (
-    <PartnerDiv whileHover={{ scale: 1.05 }} className="card w-96">
+    <PartnerDiv whileHover={{ scale: 1.05 }} className="card w-96 column">
       <img className="partner-image" src={image} alt={name} />
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
@@ -41,17 +37,6 @@ function Partner({ name, image }) {
 const Div = styled.div`
   width: 100%;
   background-color: rgb(30, 30, 30);
-  padding-top: 200px;
-  padding-bottom: 200px;
-
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
-  @media screen and (max-width: 480px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
 
   #title {
     margin-top: 30px;
@@ -60,19 +45,14 @@ const Div = styled.div`
 
   #partners-container {
     width: 90%;
-
-    display: flex;
-    flex-flow: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
   }
 `;
 
 function Partners() {
   const { t } = useTranslation();
   return (
-    <Div id="partners">
+    <Div id="partners" className="column page-padding">
       <motion.div
         id="title"
         className="page-title"
@@ -87,7 +67,7 @@ function Partners() {
       >
         {t('title.partners')}
       </motion.div>
-      <div id="partners-container">
+      <div id="partners-container" className="row">
         {settings.partners.map(({ name, image }) => (
           <Partner name={t(`partners.${name}`)} image={image} key={name} />
         ))}

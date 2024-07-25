@@ -32,3 +32,27 @@ img {
     font-size: 30px;
   }
 }
+
+.column {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-padding {
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  @media screen and (max-width: 480px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
