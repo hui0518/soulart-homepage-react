@@ -20,21 +20,14 @@ const Div = styled.div`
     border-radius: 20px;
     display: block;
 
-    scale: 1;
-
-    transition-property: scale;
-    transition-duration: 0.6s;
-    transition-timing-function: ease-in-out;
-  }
-
-  .not-loaded {
-    display: none;
+    object-fit: cover;
+    transition: scale 0.6s ease-in-out;
   }
 
   #mainText {
     font-size: 50px;
     font-weight: 400;
-    font-family: Arvo, sans-serif;
+    font-family: Arvo, 'Noto Sans KR', sans-serif;
     color: white;
 
     position: absolute;
@@ -45,20 +38,11 @@ const Div = styled.div`
     white-space: pre-line;
     opacity: 0;
 
-    transition-property: opacity;
-    transition-duration: 2s;
-    transition-timing-function: ease-in-out;
+    transition: opacity 2s ease-in-out;
   }
 
   .scrolled {
     scale: 0.8;
-  }
-
-  #homeImage {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
   }
 `;
 
@@ -89,19 +73,13 @@ function Home() {
   const [t] = useTranslation();
 
   return (
-    <Div id="home">
-      <div
-        id="wrapper"
+    <Div id="home" style={{ height: window.innerHeight - 100 }}>
+      <div id="mainText">{t('slogan')}</div>
+      <img
         className={classNames('image', { scrolled })}
-        style={{ height: window.innerHeight - 100 }}
-      >
-        <div id="mainText">{t('slogan')}</div>
-        <img
-          id="homeImage"
-          src="./assets/home/dark.jpg"
-          alt="soulart station"
-        />
-      </div>
+        src="./assets/home/dark.jpg"
+        alt="soulart station"
+      />
     </Div>
   );
 }

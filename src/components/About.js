@@ -29,10 +29,6 @@ const Div = styled.div`
   }
 
   #title {
-    font-size: 50px;
-    font-weight: 900;
-    font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
-    font-style: italic;
     margin-bottom: 50px;
   }
 
@@ -157,6 +153,7 @@ function About() {
     <Div id="about">
       <motion.div
         id="title"
+        className="page-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',

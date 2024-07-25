@@ -8,6 +8,10 @@ const MemberDiv = styled(motion.div)`
   width: 200px;
   height: 400px;
 
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
   margin-left: 10px;
   margin-right: 10px;
   background: none;
@@ -17,11 +21,7 @@ const MemberDiv = styled(motion.div)`
     width: 40vw;
   }
 
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
-  img {
+  .member-image {
     width: 200px;
     height: 300px;
     object-fit: cover;
@@ -34,7 +34,7 @@ function Member({ name, image }) {
   return (
     <MemberDiv whileHover={{ scale: 1.05 }} className="card">
       <figure>
-        <img src={image} alt={name} />
+        <img className="member-image" src={image} alt={name} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
@@ -62,17 +62,11 @@ const Div = styled.div`
   justify-content: center;
 
   #title {
-    font-size: 50px;
-    font-weight: 900;
-    font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
-    font-style: italic;
-    color: white;
-
     margin-top: 30px;
     margin-bottom: 50px;
   }
 
-  #membersContainer {
+  #members-container {
     width: 90%;
     color: white;
 
@@ -90,6 +84,7 @@ function Members() {
     <Div id="members">
       <motion.div
         id="title"
+        className="page-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',
@@ -101,7 +96,7 @@ function Members() {
       >
         {t('title.members')}
       </motion.div>
-      <div id="membersContainer">
+      <div id="members-container">
         {settings.members.map(({ name, image }) => (
           <Member name={t(`members.${name}`)} image={image} key={name} />
         ))}

@@ -6,9 +6,7 @@ import settings from '../settings.json';
 const PartnerDiv = styled(motion.div)`
   width: 200px;
   height: 300px;
-  @media screen and (max-width: 480px) {
-    width: 40vw;
-  }
+
   margin-left: 10px;
   margin-right: 10px;
   background: none;
@@ -17,7 +15,11 @@ const PartnerDiv = styled(motion.div)`
   flex-flow: column;
   align-items: center;
 
-  .partnerImage {
+  @media screen and (max-width: 480px) {
+    width: 40vw;
+  }
+
+  .partner-image {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -28,9 +30,7 @@ const PartnerDiv = styled(motion.div)`
 function Partner({ name, image }) {
   return (
     <PartnerDiv whileHover={{ scale: 1.05 }} className="card w-96">
-      <figure>
-        <img className="partnerImage" src={image} alt={name} />
-      </figure>
+      <img className="partner-image" src={image} alt={name} />
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
       </div>
@@ -40,32 +40,25 @@ function Partner({ name, image }) {
 
 const Div = styled.div`
   width: 100%;
+  background-color: rgb(30, 30, 30);
   padding-top: 200px;
   padding-bottom: 200px;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 
   @media screen and (max-width: 480px) {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
-  background-color: rgb(30, 30, 30);
-
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-
   #title {
     margin-top: 30px;
     margin-bottom: 50px;
-
-    font-size: 50px;
-    font-weight: 900;
-    font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
-    font-style: italic;
-    color: white;
   }
 
-  #partnersContainer {
+  #partners-container {
     width: 90%;
 
     display: flex;
@@ -82,6 +75,7 @@ function Partners() {
     <Div id="partners">
       <motion.div
         id="title"
+        className="page-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',
@@ -93,7 +87,7 @@ function Partners() {
       >
         {t('title.partners')}
       </motion.div>
-      <div id="partnersContainer">
+      <div id="partners-container">
         {settings.partners.map(({ name, image }) => (
           <Partner name={t(`partners.${name}`)} image={image} key={name} />
         ))}

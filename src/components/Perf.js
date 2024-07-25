@@ -3,50 +3,36 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Div = styled.div`
+  background-color: rgb(30, 30, 30);
+  width: 100%;
   padding-top: 200px;
   padding-bottom: 200px;
-  width: 100%;
-  @media screen and (max-width: 480px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  background-color: rgb(30, 30, 30);
 
   display: flex;
   flex-flow: column;
   align-items: center;
 
-  #title {
-    color: white;
-    font-size: 50px;
-    font-weight: 900;
-    font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
-    font-style: italic;
-    margin-bottom: 50px;
-    text-align: center;
+  @media screen and (max-width: 480px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .description {
     font-family: 'Noto Sans KR', sans-serif;
   }
 
-  img {
-    width: 300px;
-  }
-
   #container {
     width: 90vw;
-
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
     margin-bottom: 20px;
 
     * {
       width: 45vw;
-      height: 35vh;
+      height: 35vw;
       margin-left: 10px;
       margin-right: 10px;
       object-fit: cover;
@@ -62,6 +48,7 @@ function Buy() {
     <Div id="perf">
       <motion.div
         id="title"
+        className="page-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',
@@ -76,13 +63,7 @@ function Buy() {
 
       <div id="container">
         <img src="./assets/perf/perf1.png" alt="Performance" />
-        <video
-          src="./assets/perf/perf2.webm"
-          muted
-          autoPlay
-          loop
-          playsInline
-        ></video>
+        <video src="./assets/perf/perf2.webm" muted autoPlay loop playsInline />
       </div>
 
       <h1 className="description">{t('perf.description')}</h1>

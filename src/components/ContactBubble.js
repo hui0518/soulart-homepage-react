@@ -24,7 +24,7 @@ const Div = styled.div`
     opacity: 0;
 
     transition-property: opacity;
-    transition-duration: 1.5s;
+    transition-duration: 1s;
   }
 `;
 
