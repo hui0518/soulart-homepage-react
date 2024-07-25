@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Div = styled.div`
   position: fixed;
   left: 100vw;
-  top: calc(var(--vh, 1vh) * 100);
+  top: 100vh;
 
   width: 100px;
   height: 40px;
