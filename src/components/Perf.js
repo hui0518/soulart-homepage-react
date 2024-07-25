@@ -5,6 +5,12 @@ import { motion } from 'framer-motion';
 const Div = styled.div`
   padding-top: 200px;
   padding-bottom: 200px;
+  width: 100%;
+  @media screen and (max-width: 480px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
   background-color: rgb(30, 30, 30);
 
   display: flex;
@@ -18,6 +24,7 @@ const Div = styled.div`
     font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
     font-style: italic;
     margin-bottom: 50px;
+    text-align: center;
   }
 
   .description {

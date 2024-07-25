@@ -6,14 +6,17 @@ import styled from 'styled-components';
 const Div = styled.div`
   width: 100%;
   height: 100vh;
+  height: -webkit-fill-available;
 
   display: flex;
   flex-flow: column;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
 
   .image {
     width: 90vw;
-    height: 85vh;
+    height: calc(100vh - 64px - 40px);
     border-radius: 20px;
     display: block;
 

@@ -6,6 +6,9 @@ import settings from '../settings.json';
 const PartnerDiv = styled(motion.div)`
   width: 200px;
   height: 300px;
+  @media screen and (max-width: 480px) {
+    width: 40vw;
+  }
   margin-left: 10px;
   margin-right: 10px;
   background: none;
@@ -39,6 +42,11 @@ const Div = styled.div`
   width: 100%;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  @media screen and (max-width: 480px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
   background-color: rgb(30, 30, 30);
 

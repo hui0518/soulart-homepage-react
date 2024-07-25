@@ -6,8 +6,14 @@ import { motion } from 'framer-motion';
 import settings from '../settings.json';
 
 const Div = styled.div`
-  margin-top: 200px;
-  margin-bottom: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  @media screen and (max-width: 480px) {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -162,6 +168,8 @@ function About() {
       >
         {t('title.about')}
       </motion.div>
+      <div>하늘을 달리는 우리 꿈을 보아라</div>
+      <div>하늘을 지키는 우리 힘을 믿으라</div>
 
       <div
         id="carousel"

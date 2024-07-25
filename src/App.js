@@ -9,11 +9,7 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 import ContactBubble from './components/ContactBubble';
 import Perf from './components/Perf';
-
-window.addEventListener('scroll', () => {
-  const contactBubble = document.getElementById('apply');
-  contactBubble.style.opacity = window.scrollY > 10 ? 1 : 0;
-});
+import BuyPopup from './components/BuyPopup';
 
 function App() {
   return (
@@ -21,6 +17,8 @@ function App() {
       <Contact />
 
       <ContactBubble />
+
+      <BuyPopup />
 
       <Header />
 

@@ -3,8 +3,13 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Div = styled.div`
-  margin-top: 200px;
-  margin-bottom: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  @media screen and (max-width: 480px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
   display: flex;
   flex-flow: column;
@@ -25,6 +30,14 @@ const Div = styled.div`
 
   img {
     width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  #buy-popup {
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgb(40, 40, 40);
   }
 `;
 
@@ -48,6 +61,15 @@ function Buy() {
       </motion.div>
       <img src="./assets/buy/elon.jpg" alt="melon" />
       <h1 className="description">{t('buy.description')}</h1>
+      <motion.button
+        id="buy-popup"
+        className="btn"
+        onClick={() => document.getElementById('buy-modal').showModal()}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <div>{t('buy.button')}</div>
+      </motion.button>
     </Div>
   );
 }

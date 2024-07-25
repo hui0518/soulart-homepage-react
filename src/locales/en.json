@@ -40,7 +40,13 @@
     "memo": "Memo"
   },
   "buy": {
-    "description": "Buy Melon Musk"
+    "description": "Buy Melon Musk",
+    "button": "Buy",
+    "popup": {
+      "title": "Buy",
+      "description": "Would you buy?",
+      "button": "Take my Money"
+    }
   },
   "footer": {
     "representative": "Representative: Yui Yuigahama",

@@ -13,6 +13,10 @@ const MemberDiv = styled(motion.div)`
   background: none;
   z-index: 1;
 
+  @media screen and (max-width: 480px) {
+    width: 40vw;
+  }
+
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -47,6 +51,11 @@ const Div = styled.div`
 
   padding-top: 150px;
   padding-bottom: 150px;
+
+  @media screen and (max-width: 480px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
   display: flex;
   flex-flow: column;

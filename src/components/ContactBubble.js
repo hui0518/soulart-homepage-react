@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Div = styled.div`
@@ -27,6 +29,19 @@ const Div = styled.div`
 `;
 
 function ContactBubble() {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const contactBubble = document.getElementById('apply');
+    if (window.scrollY > 10) {
+      contactBubble.style.opacity = 1;
+    }
+
+    window.addEventListener('scroll', () => {
+      contactBubble.style.opacity = window.scrollY > 10 ? 1 : 0;
+    });
+  }, []);
+
   return (
     <Div>
       <motion.button
@@ -36,7 +51,7 @@ function ContactBubble() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <div>Contact</div>
+        <div>{t('contact.bubble')}</div>
       </motion.button>
     </Div>
   );

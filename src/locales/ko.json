@@ -40,7 +40,13 @@
     "memo": "기타 메모"
   },
   "buy": {
-    "description": "머스크 멜론 사세요"
+    "description": "머스크 멜론 사세요",
+    "button": "구매하기",
+    "popup": {
+      "title": "구매",
+      "description": "하나 사라",
+      "button": "아 원 디스 나우"
+    }
   },
   "footer": {
     "representative": "대표: 유이가하마 유이",
