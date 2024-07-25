@@ -16,9 +16,7 @@ const Div = styled.div`
   .image {
     width: 90vw;
     height: calc(100vh - 64px - 40px);
-    @supports (-webkit-touch-callout: none) {
-      height: calc(-webkit-fill-available - 64px);
-    }
+
     border-radius: 20px;
     display: block;
 
@@ -66,7 +64,6 @@ const Div = styled.div`
 
 function Home() {
   const [scrolled, setScrolled] = useState(false);
-  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const mainText = document.getElementById('mainText');
@@ -87,9 +84,6 @@ function Home() {
         }, 750);
       }
     });
-
-    const homeImage = document.getElementById('homeImage');
-    homeImage.addEventListener('load', () => setLoaded(true));
   }, []);
 
   const [t] = useTranslation();
@@ -98,7 +92,8 @@ function Home() {
     <Div id="home">
       <div
         id="wrapper"
-        className={classNames('image', { scrolled, 'not-loaded': !loaded })}
+        className={classNames('image', { scrolled })}
+        style={{ height: window.innerHeight - 100 }}
       >
         <div id="mainText">{t('slogan')}</div>
         <img
@@ -107,10 +102,6 @@ function Home() {
           alt="soulart station"
         />
       </div>
-
-      <div
-        className={classNames('image', 'skeleton', { 'not-loaded': loaded })}
-      />
     </Div>
   );
 }

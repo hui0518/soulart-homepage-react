@@ -6,12 +6,12 @@ import styled from 'styled-components';
 const Div = styled.div`
   position: fixed;
   left: 100vw;
-  top: 100vh;
+  bottom: 0;
 
   width: 100px;
   height: 40px;
 
-  transform: translate(calc(-100% - 40px), calc(-100% - 50px));
+  transform: translate(calc(-100% - 40px), -100%);
   z-index: 10;
 
   #apply {
