@@ -18,13 +18,11 @@ const Div = styled.div`
     width: 100%;
     height: 100%;
     line-height: 40px;
-    background-color: rgba(40, 40, 40, 1);
+    background-color: rgb(40, 40, 40);
     border-radius: 15px;
     border: 2px solid rgb(50, 50, 50);
     opacity: 0;
-
-    transition-property: opacity;
-    transition-duration: 1s;
+    transition: opacity 1s ease-in-out;
   }
 `;
 

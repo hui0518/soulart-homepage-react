@@ -20,6 +20,18 @@ const Div = styled.div`
       margin-left: 20px;
       margin-right: 10px;
     }
+
+    &-lang {
+      background: none;
+      border: none;
+    }
+
+    &-buttons {
+      font-size: 20px;
+      font-weight: 400;
+      font-family: var(--arvo);
+      color: white;
+    }
   }
 
   .scrolled {
@@ -32,20 +44,6 @@ const Div = styled.div`
     background: rgb(20, 20, 20);
     border-radius: 10px;
   }
-
-  .navbar-end {
-    span {
-      background: none;
-      border: none;
-    }
-  }
-
-  #desktopButtons {
-    font-size: 20px;
-    font-weight: 400;
-    font-family: var(--arvo);
-    color: white;
-  }
 `;
 
 function Header() {
@@ -57,6 +55,14 @@ function Header() {
     const nextLang = lang === 'ko' ? 'en' : 'ko';
     setLang(nextLang);
     i18n.changeLanguage(nextLang);
+  };
+
+  const moveTo = (id) => {
+    const page = document.getElementById(id);
+    window.scrollTo({
+      top: id === 'home' ? 0 : page.offsetTop - 64,
+      behavior: 'smooth',
+    });
   };
 
   useEffect(() => {
@@ -118,43 +124,23 @@ function Header() {
             >
               {buttons.map(({ id }) => (
                 <li key={`${id}_dropdown`}>
-                  <a
-                    onClick={() => {
-                      const elem = document.getElementById(id);
-                      window.scrollTo({
-                        top: id === 'home' ? 0 : elem.offsetTop - 90,
-                        behavior: 'smooth',
-                      });
-                    }}
-                  >
-                    {t(`header.${id}`)}
-                  </a>
+                  <a onClick={() => moveTo(id)}>{t(`header.${id}`)}</a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul id="desktopButtons" className="menu menu-horizontal px-1">
+          <ul className="navbar-buttons menu menu-horizontal px-1">
             {buttons.map(({ id }) => (
               <li key={id}>
-                <a
-                  onClick={() => {
-                    const elem = document.getElementById(id);
-                    window.scrollTo({
-                      top: id === 'home' ? 0 : elem.offsetTop - 90,
-                      behavior: 'smooth',
-                    });
-                  }}
-                >
-                  {t(`header.${id}`)}
-                </a>
+                <a onClick={() => moveTo(id)}>{t(`header.${id}`)}</a>
               </li>
             ))}
           </ul>
         </div>
         <div className="navbar-end">
-          <span className="btn" onClick={changeLanguage}>
+          <span className="btn navbar-lang" onClick={changeLanguage}>
             {lang === 'ko' ? 'View in English' : '한국어로 보기'}
           </span>
         </div>
