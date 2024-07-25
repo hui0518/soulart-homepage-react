@@ -11,6 +11,9 @@ import ContactBubble from './components/ContactBubble';
 import Perf from './components/Perf';
 import BuyPopup from './components/BuyPopup';
 
+const vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty(`--vh`, `${vh}`);
+
 function App() {
   return (
     <div className="App">

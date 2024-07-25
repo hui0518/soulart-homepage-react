@@ -6,11 +6,7 @@ import styled from 'styled-components';
 const Div = styled.div`
   position: fixed;
   left: 100vw;
-  top: 100vh;
-
-  @supports (-webkit-touch-callout: none) {
-    top: -webkit-fill-available;
-  }
+  top: calc(var(--vh, 1vh) * 100);
 
   width: 100px;
   height: 40px;
