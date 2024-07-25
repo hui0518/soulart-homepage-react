@@ -45,6 +45,9 @@ const Div = styled.div`
 
   #partners-container {
     width: 90%;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
     flex-wrap: wrap;
   }
 `;

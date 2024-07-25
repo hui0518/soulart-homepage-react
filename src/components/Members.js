@@ -47,6 +47,9 @@ const Div = styled.div`
 
   #members-container {
     width: 90%;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
     color: white;
     flex-wrap: wrap;
   }

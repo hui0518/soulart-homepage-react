@@ -12,6 +12,9 @@ const Div = styled.div`
 
     * {
       width: 45vw;
+      @media screen and (max-width: 480px) {
+        width: 40vw;
+      }
       height: 35vw;
       margin-left: 10px;
       margin-right: 10px;
