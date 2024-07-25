@@ -31,6 +31,9 @@ const Div = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -75%);
+    @media screen and (max-width: 480px) {
+      transform: translate(-50%, -50%);
+    }
     z-index: 5;
     white-space: pre-line;
     opacity: 0;
