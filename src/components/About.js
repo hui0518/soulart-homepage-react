@@ -10,6 +10,16 @@ const Div = styled.div`
     margin-top: 30px;
   }
 
+  .videos {
+    &-title {
+      margin-bottom: 4px;
+    }
+
+    &-wrapper {
+      position: relative;
+    }
+  }
+
   .carousel {
     overflow: hidden;
     width: 70vw;
@@ -20,10 +30,6 @@ const Div = styled.div`
     }
   }
 
-  #title {
-    margin-bottom: 50px;
-  }
-
   .button {
     width: 30px;
     height: 30px;
@@ -31,58 +37,48 @@ const Div = styled.div`
     border-radius: 15px;
     margin-left: 8px;
     margin-right: 8px;
-    background-color: black;
-    color: white;
+    background-color: rgb(40, 40, 40);
 
-    background-color: rgb(30, 30, 30);
+    &.active {
+      background-color: grey;
+    }
 
     &:hover {
       cursor: pointer;
-    }
 
-    &:hover.inactive {
-      cursor: pointer;
-      background-color: rgb(45, 45, 45);
-    }
-  }
-
-  .active {
-    background-color: grey;
-  }
-
-  .left-up {
-    position: absolute;
-    left: 15px;
-    top: 10px;
-    font-size: 50px;
-    font-family: var(--arvo);
-
-    padding-left: 5px;
-    padding-right: 5px;
-
-    @media screen and (max-width: 800px) {
-      font-size: 16px;
-      top: -30px;
+      &.inactive {
+        background-color: rgb(50, 50, 50);
+      }
     }
   }
 
-  .left-down {
-    position: absolute;
-    left: 15px;
-    bottom: 10px;
-    font-size: 50px;
-    font-family: var(--arvo);
+  .video {
+    &-text {
+      position: absolute;
+      font-size: 50px;
+      font-family: var(--arvo);
+      padding-left: 5px;
+      padding-right: 5px;
+      left: 15px;
 
-    padding-left: 5px;
-    padding-right: 5px;
-    @media screen and (max-width: 800px) {
-      font-size: 16px;
-      bottom: -30px;
+      @media screen and (max-width: 800px) {
+        font-size: 16px;
+      }
+
+      &-up {
+        top: 10px;
+        @media screen and (max-width: 800px) {
+          top: -30px;
+        }
+      }
+
+      &-down {
+        bottom: 10px;
+        @media screen and (max-width: 800px) {
+          bottom: -30px;
+        }
+      }
     }
-  }
-
-  .video-wrapper {
-    position: relative;
   }
 `;
 
@@ -134,10 +130,9 @@ function About() {
   const [t] = useTranslation();
 
   return (
-    <Div id="about" className="column page-padding">
+    <Div id="about" className="videos column page-padding">
       <motion.div
-        id="title"
-        className="page-title"
+        className="videos-title page-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',
@@ -152,18 +147,15 @@ function About() {
       <div>하늘을 달리는 우리 꿈을 보아라</div>
       <div>하늘을 지키는 우리 힘을 믿으라</div>
 
-      <div
-        id="carousel"
-        className="mainVideo carousel carousel-center space-x-4 p-4"
-      >
+      <div id="carousel" className="carousel carousel-center space-x-4 p-4">
         <div className="carousel-item" style={{ width: half }}></div>
 
         {settings.videos.map(({ id, image, up, down }) => (
           <div key={id} className="carousel-item">
-            <div className="video-wrapper">
+            <div className="videos-wrapper">
               <video
                 id={id}
-                className="mainVideo rounded-box"
+                className="rounded-box"
                 src={image}
                 muted
                 playsInline
@@ -171,8 +163,10 @@ function About() {
                   width,
                 }}
               ></video>
-              <div className="left-up">{t(up)}</div>
-              <div className="left-down">{t(down)}</div>
+              <div className="left-up video-text video-text-up">{t(up)}</div>
+              <div className="left-down video-text video-text-down">
+                {t(down)}
+              </div>
             </div>
           </div>
         ))}
@@ -187,7 +181,10 @@ function About() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             id={`button${i}`}
-            className={classNames('button', { active: cur === i - 1 })}
+            className={classNames('button', {
+              active: cur === i - 1,
+              inactive: cur !== i - 1,
+            })}
           />
         ))}
       </div>

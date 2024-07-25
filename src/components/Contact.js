@@ -3,25 +3,23 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Dialog = styled.dialog`
-  .modal-box {
-    height: 600px;
-    background-color: rgb(20, 20, 20);
-    border-radius: 20px;
-  }
+  .modal {
+    &-box {
+      height: 600px;
+      background-color: rgb(20, 20, 20);
+      border-radius: 20px;
+    }
 
-  input {
-    margin-left: 10px;
-  }
+    &-button {
+      border-radius: 10px;
+      margin-top: 20px;
+    }
 
-  textarea {
-    width: 100%;
-    height: 200px;
-    resize: none;
-  }
-
-  #submit-button {
-    border-radius: 10px;
-    margin-top: 20px;
+    &-textarea {
+      width: 100%;
+      height: 200px;
+      resize: none;
+    }
   }
 `;
 
@@ -92,13 +90,13 @@ function Contact() {
 
         <textarea
           id="memo"
-          className="textarea textarea-bordered"
+          className="modal-textarea textarea textarea-bordered"
           placeholder={t('contact.memo')}
         />
 
         <motion.button
           id="submit-button"
-          className="btn btn-active btn-primary"
+          className="modal-button btn btn-active btn-primary"
           onClick={sendEmail}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
