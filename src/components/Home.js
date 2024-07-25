@@ -6,7 +6,6 @@ import styled from 'styled-components';
 const Div = styled.div`
   width: 100%;
   height: 100vh;
-  height: -webkit-fill-available;
 
   display: flex;
   flex-flow: column;
@@ -17,7 +16,9 @@ const Div = styled.div`
   .image {
     width: 90vw;
     height: calc(100vh - 64px - 40px);
-    height: -webkit-fill-available;
+    @supports (-webkit-touch-callout: none) {
+      height: calc(-webkit-fill-available - 64px);
+    }
     border-radius: 20px;
     display: block;
 

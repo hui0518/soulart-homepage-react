@@ -8,6 +8,10 @@ const Div = styled.div`
   left: 100vw;
   top: 100vh;
 
+  @supports (-webkit-touch-callout: none) {
+    top: -webkit-fill-available;
+  }
+
   width: 100px;
   height: 40px;
 
