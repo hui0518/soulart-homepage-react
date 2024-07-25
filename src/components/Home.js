@@ -17,6 +17,7 @@ const Div = styled.div`
   .image {
     width: 90vw;
     height: calc(100vh - 64px - 40px);
+    height: -webkit-fill-available;
     border-radius: 20px;
     display: block;
 
