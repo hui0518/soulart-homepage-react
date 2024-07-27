@@ -7,8 +7,7 @@ const PartnerDiv = styled(motion.div)`
   width: 200px;
   height: 300px;
 
-  margin-left: var(--card-margin);
-  margin-right: var(--card-margin);
+  margin: 0 var(--card-margin);
   background: none;
 
   @media screen and (max-width: 480px) {

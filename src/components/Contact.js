@@ -8,6 +8,7 @@ const Dialog = styled.dialog`
       height: 600px;
       background-color: rgb(20, 20, 20);
       border-radius: 20px;
+      border: 3px solid rgb(40, 40, 40);
     }
 
     &-button {

@@ -8,8 +8,7 @@ const MemberDiv = styled(motion.div)`
   width: 200px;
   height: 400px;
 
-  margin-left: var(--card-margin);
-  margin-right: var(--card-margin);
+  margin: 0 var(--card-margin);
   background: none;
   z-index: 1;
 

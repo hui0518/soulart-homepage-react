@@ -18,13 +18,13 @@ const Div = styled.div`
 
     &-logo {
       width: 100px;
-      margin-left: 20px;
-      margin-right: 10px;
+      margin: 0 10px;
     }
 
     &-lang {
       background: none;
       border: none;
+      color: white;
     }
 
     &-buttons {
