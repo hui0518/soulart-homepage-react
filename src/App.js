@@ -16,8 +16,9 @@ import styled from 'styled-components';
 const Div = styled.div`
   --arvo: Arvo, 'Noto Sans KR', sans-serif;
   --sans: 'Noto Sans KR', sans-serif;
+  --header-height: 64px;
 
-  font-family: var() (--sans);
+  font-family: var(--sans);
 `;
 
 function App() {

@@ -14,6 +14,7 @@ const Div = styled.div`
     width: 100vw;
     z-index: 10;
     transition: all 0.4s ease-in-out;
+    height: var(--header-height);
 
     &-logo {
       width: 100px;
