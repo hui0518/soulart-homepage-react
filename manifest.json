@@ -1,26 +1,21 @@
 {
-  "short_name": "Soulart Homepage",
-  "name": "Soulart Homepage",
+  "short_name": "Soulart",
+  "name": "Homepage of Soulart Company",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "32x32 16x16",
+      "src": "favicon_rect/favicon.ico",
+      "sizes": "16x16 32x32 180x180 192x192 512x512",
       "type": "image/x-icon"
     },
     {
-      "src": "favicons/favicon192.png",
+      "src": "favicon_rect/favicon192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "favicons/favicon512.png",
+      "src": "favicon_rect/favicon512.png",
       "type": "image/png",
       "sizes": "512x512"
-    },
-    {
-      "src": "favicons/favicon180.png",
-      "size": "180x180",
-      "type": "image/png"
     }
   ],
   "start_url": ".",
