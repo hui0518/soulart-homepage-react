@@ -13,12 +13,11 @@ import BuyPopup from './components/BuyPopup';
 
 import styled from 'styled-components';
 
+// declare css variables here
 const Div = styled.div`
   --arvo: Arvo, 'Noto Sans KR', sans-serif;
   --sans: 'Noto Sans KR', sans-serif;
   --header-height: 64px;
-
-  font-family: var(--sans);
 `;
 
 function App() {

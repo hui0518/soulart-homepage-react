@@ -5,6 +5,7 @@
 .App {
   text-align: center;
   padding-top: 64px;
+  font-family: var(--sans);
 
   -webkit-user-select: none;
   -moz-user-select: none;
