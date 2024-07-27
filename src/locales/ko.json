@@ -4,13 +4,20 @@
     "rin": "시부야 린",
     "mio": "혼다 미오",
     "ikuyo": "키타 이쿠요",
-    "mung": "뭉탱이"
+    "mung": "뭉탱이",
+    "pear": "배먹어",
+    "baqui": "바퀴",
+    "moving": "무빙맨"
   },
   "partners": {
     "hololive": "모두잠수준비",
     "idolmaster": "아이돌마스터",
     "kaist": "한국과학기술원",
-    "tesla": "테슬라"
+    "tesla": "테슬라",
+    "af": "에어 공익",
+    "luna": "루나 코인",
+    "merge": "머지포인트",
+    "tmon": "티몬"
   },
   "header": {
     "home": "홈",
@@ -40,7 +47,7 @@
     "memo": "기타 메모"
   },
   "buy": {
-    "description": "머스크 멜론 사세요",
+    "description": "머스크 멜론 사세요\n구매시 1+100 기계증정 행사 진행 중 데스.",
     "button": "구매하기",
     "popup": {
       "title": "구매",
@@ -55,7 +62,7 @@
     "email": "이메일: yuigahama@yui.com"
   },
   "perf": {
-    "description": "매우 좋은 파포만스"
+    "description": "이 기계를 사면 혈액순환, 피부미용, 피로감개선, 가정의평화에 도움을 주며 전자파 차단\nmsg제거, 음이온 발산, 지구를 평평하게 만드는 것에 도움을 줍니다."
   },
   "about": {
     "leftup1": "위 왼 1",
@@ -63,6 +70,7 @@
     "leftup2": "위 왼 2",
     "leftdown2": "아래 왼 2",
     "leftup3": "위 왼 3",
-    "leftdown3": "아래 왼 3"
+    "leftdown3": "아래 왼 3",
+    "description": "자로고 신앙을 잃는 것은 죽음을 의미하는 것이며... 갈! \n 신호등은 빨간불에도 \n 도로주행"
   }
 }

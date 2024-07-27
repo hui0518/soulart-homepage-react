@@ -4,13 +4,20 @@
     "rin": "Rin Shibuya",
     "mio": "Mio Honda",
     "ikuyo": "Ikuyo Kita",
-    "mung": "Mung Tang E"
+    "mung": "Mung Tang E",
+    "pear": "Eating Pear",
+    "baqui": "Baqui",
+    "moving": "Moving Man"
   },
   "partners": {
     "hololive": "Hololive",
     "idolmaster": "idolm@ster",
     "kaist": "KAIST",
-    "tesla": "Tesla"
+    "tesla": "Tesla",
+    "af": "Chair Force",
+    "luna": "Luna Coin",
+    "merge": "Merge Point",
+    "tmon": "TMON"
   },
   "header": {
     "home": "Home",
@@ -27,7 +34,7 @@
     "buy": "Buy",
     "perf": "Performance"
   },
-  "slogan": "Lorem Ipsum\nThink Different",
+  "slogan": "Yuigahama Yui\nYahallo",
   "contact": {
     "bubble": "Contact",
     "title": "Contact & Apply",
@@ -40,7 +47,7 @@
     "memo": "Memo"
   },
   "buy": {
-    "description": "Buy Melon Musk",
+    "description": "Buy Melon Musk\nIf you buy this devies, We can earn money",
     "button": "Buy",
     "popup": {
       "title": "Buy",
@@ -55,7 +62,7 @@
     "email": "Mail: yuigahama@yui.com"
   },
   "perf": {
-    "description": "Perfomance is very high and good"
+    "description": "Perfomance is very high and good\nIf you don't buy this BEAUTIFUL DEVICE, you are an idiot."
   },
   "about": {
     "leftup1": "Up Left 1",
@@ -63,6 +70,7 @@
     "leftup2": "Up Left 2",
     "leftdown2": "Up Down 2",
     "leftup3": "Up Left 3",
-    "leftdown3": "Up Down 3"
+    "leftdown3": "Up Down 3",
+    "description": "mimi mirakuru miku rung rung\nFrance Paris Olympic\nJapan Tokyo Osaka Kyoto"
   }
 }

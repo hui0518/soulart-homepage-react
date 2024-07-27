@@ -5,6 +5,10 @@ import { motion } from 'framer-motion';
 const Div = styled.div`
   background-color: rgb(30, 30, 30);
 
+  .description {
+    white-space: pre-wrap;
+  }
+
   #container {
     width: 90vw;
     margin-top: 50px;

@@ -19,6 +19,18 @@
     {
       "name": "mung",
       "image": "./assets/members/mte.png"
+    },
+    {
+      "name": "pear",
+      "image": "./assets/members/pear.JPG"
+    },
+    {
+      "name": "moving",
+      "image": "./assets/members/moving.GIF"
+    },
+    {
+      "name": "baqui",
+      "image": "./assets/members/baqui.JPG"
     }
   ],
   "partners": [
@@ -37,6 +49,22 @@
     {
       "name": "tesla",
       "image": "./assets/partners/tesla.jpg"
+    },
+    {
+      "name": "af",
+      "image": "./assets/partners/af.svg"
+    },
+    {
+      "name": "luna",
+      "image": "./assets/partners/luna.jpg"
+    },
+    {
+      "name": "merge",
+      "image": "./assets/partners/merge.jpg"
+    },
+    {
+      "name": "tmon",
+      "image": "./assets/partners/tmon.png"
     }
   ],
   "videos": [

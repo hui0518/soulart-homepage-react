@@ -144,8 +144,9 @@ function About() {
       >
         {t('title.about')}
       </motion.div>
-      <div>하늘을 달리는 우리 꿈을 보아라</div>
-      <div>하늘을 지키는 우리 힘을 믿으라</div>
+      <div className="description" style={{ whiteSpace: 'pre-wrap' }}>
+        {t('about.description')}
+      </div>
 
       <div id="carousel" className="carousel carousel-center space-x-4 p-4">
         <div className="carousel-item" style={{ width: half }}></div>

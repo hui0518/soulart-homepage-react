@@ -8,8 +8,8 @@ const MemberDiv = styled(motion.div)`
   width: 200px;
   height: 400px;
 
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: var(--card-margin);
+  margin-right: var(--card-margin);
   background: none;
   z-index: 1;
 
@@ -18,7 +18,7 @@ const MemberDiv = styled(motion.div)`
   }
 
   .member-image {
-    width: 200px;
+    width: var(--card-width);
     height: 300px;
     object-fit: cover;
     border-radius: 20px;
@@ -38,6 +38,9 @@ function Member({ name, image }) {
 }
 
 const Div = styled.div`
+  --card-width: 200px;
+  --card-margin: 10px;
+
   width: 100%;
 
   #title {
@@ -47,6 +50,7 @@ const Div = styled.div`
 
   #members-container {
     width: 90%;
+    max-width: calc(var(--card-width) * 4 + var(--card-margin) * 8);
     @media screen and (max-width: 480px) {
       width: 100%;
     }

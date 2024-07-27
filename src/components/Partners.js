@@ -7,8 +7,8 @@ const PartnerDiv = styled(motion.div)`
   width: 200px;
   height: 300px;
 
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: var(--card-margin);
+  margin-right: var(--card-margin);
   background: none;
 
   @media screen and (max-width: 480px) {
@@ -16,7 +16,7 @@ const PartnerDiv = styled(motion.div)`
   }
 
   .partner-image {
-    width: 200px;
+    width: var(--card-width);
     height: 200px;
     object-fit: cover;
     border-radius: 20px;
@@ -35,6 +35,9 @@ function Partner({ name, image }) {
 }
 
 const Div = styled.div`
+  --card-width: 200px;
+  --card-margin: 10px;
+
   width: 100%;
   background-color: rgb(30, 30, 30);
 
@@ -45,6 +48,7 @@ const Div = styled.div`
 
   #partners-container {
     width: 90%;
+    max-width: calc(var(--card-width) * 4 + var(--card-margin) * 8);
     @media screen and (max-width: 480px) {
       width: 100%;
     }

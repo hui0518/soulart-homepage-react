@@ -19,6 +19,10 @@ const Div = styled.div`
       margin-top: 10px;
       background-color: rgb(40, 40, 40);
     }
+
+    &-description {
+      white-space: pre-wrap;
+    }
   }
 `;
 
