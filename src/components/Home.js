@@ -79,7 +79,7 @@ function Home() {
       <div id="mainText">{t('slogan')}</div>
       <img
         className={classNames('image', { scrolled })}
-        src="./assets/home/dark.jpg"
+        src="./assets/home/dark_compressed.jpg"
         alt="soulart station"
       />
     </Div>
