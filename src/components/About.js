@@ -5,20 +5,16 @@ import { motion } from 'framer-motion';
 import './About.scss';
 
 function About() {
-  const width = '70vw';
-  const half = '35vw';
-
   const [cur, setCur] = useState(0);
 
   const move = (i) => {
     const carousel = document.getElementById('carousel');
     setCur(i);
-    const a = document.getElementById(`card${i + 1}`);
-    const w = a.clientWidth;
-    a.currentTime = 0;
-    a.play();
+    const card = document.getElementById(`card${i + 1}`);
+    card.currentTime = 0;
+    card.play();
     carousel.scrollTo({
-      left: w * (i + 0.5),
+      left: card.clientWidth * i,
       behavior: 'smooth',
     });
   };
@@ -52,8 +48,6 @@ function About() {
         id="carousel"
         className="carousel carousel-center space-x-4 p-4 about-carousel"
       >
-        <div className="carousel-item" style={{ width: half }}></div>
-
         <div className="carousel-item">
           <div className="video">
             <video
@@ -62,9 +56,7 @@ function About() {
               src="./assets/about/1.mp4"
               muted
               playsInline
-              style={{
-                width,
-              }}
+              style={{ width: '70vw' }}
               onEnded={() => {
                 if (cur === 0) {
                   move(1);
@@ -88,9 +80,7 @@ function About() {
               src="./assets/about/2.mp4"
               muted
               playsInline
-              style={{
-                width,
-              }}
+              style={{ width: '70vw' }}
               onEnded={() => {
                 if (cur === 1) {
                   move(2);
@@ -114,9 +104,7 @@ function About() {
               src="./assets/about/3.mp4"
               muted
               playsInline
-              style={{
-                width,
-              }}
+              style={{ width: '70vw' }}
               onEnded={() => {
                 if (cur === 2) {
                   move(0);
@@ -131,8 +119,6 @@ function About() {
             </div>
           </div>
         </div>
-
-        <div className="carousel-item" style={{ width: half }}></div>
       </div>
 
       <div id="buttons" className="about-buttons">
