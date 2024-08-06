@@ -11,22 +11,14 @@ import ContactBubble from './components/ContactBubble';
 import Perf from './components/Perf';
 import BuyPopup from './components/BuyPopup';
 
-import styled from 'styled-components';
-
 // declare css variables here
 // mobile <= 768px;
 // 768px < tablet <= 1024px;
 // 1024px < desktop
-const Div = styled.div`
-  --arvo: Arvo, 'Noto Sans KR', sans-serif;
-  --sans: 'Noto Sans KR', sans-serif;
-  --josefin: 'Josefin Sans', 'Noto Sans KR', sans-serif;
-  --header-height: 64px;
-`;
 
 function App() {
   return (
-    <Div className="App">
+    <div className="App">
       <Contact />
       <ContactBubble />
       <BuyPopup />
@@ -42,7 +34,7 @@ function App() {
       <Buy />
 
       <Footer />
-    </Div>
+    </div>
   );
 }
 

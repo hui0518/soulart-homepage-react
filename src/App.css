@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 .App {
+  --arvo: Arvo, 'Noto Sans KR', sans-serif;
+  --sans: 'Noto Sans KR', sans-serif;
+  --josefin: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+  --header-height: 64px;
+
   text-align: center;
   padding-top: 64px;
   font-family: var(--sans);
