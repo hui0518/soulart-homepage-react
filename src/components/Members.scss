@@ -1,3 +1,5 @@
+@import './helper.scss';
+
 .member {
   width: 200px;
   height: 400px;
@@ -13,7 +15,7 @@
     z-index: 1;
   }
 
-  @media screen and (max-width: 768px) {
+  @include mobile {
     width: 40vw;
     .member-name {
       font-size: 17px;
@@ -38,7 +40,7 @@
     color: white;
     flex-wrap: wrap;
 
-    @media screen and (max-width: 768px) {
+    @include mobile {
       width: 100%;
     }
   }
