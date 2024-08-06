@@ -7,35 +7,34 @@ import settings from '../settings';
 const MemberDiv = styled(motion.div)`
   width: 200px;
   height: 400px;
-
   margin: 0 var(--card-margin);
   background: none;
   z-index: 1;
 
   @media screen and (max-width: 768px) {
     width: 40vw;
-    font-size: 15px;
-
-    .card-title {
+    .member-name {
       font-size: 17px;
     }
   }
 
-  .member-image {
-    width: var(--card-width);
-    height: 300px;
-    object-fit: cover;
-    border-radius: 20px;
-    z-index: 1;
+  .member {
+    &-image {
+      width: var(--card-width);
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      z-index: 1;
+    }
   }
 `;
 
 function Member({ name, image }) {
   return (
-    <MemberDiv whileHover={{ scale: 1.05 }} className="card column">
+    <MemberDiv whileHover={{ scale: 1.05 }} className="card column member">
       <img className="member-image" src={image} alt={name} />
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
+        <h2 className="card-title member-name">{name}</h2>
       </div>
     </MemberDiv>
   );
@@ -47,29 +46,31 @@ const Div = styled.div`
 
   width: 100%;
 
-  #title {
-    margin-top: 30px;
-    margin-bottom: 50px;
-  }
-
-  #members-container {
-    width: 90%;
-    max-width: calc(var(--card-width) * 4 + var(--card-margin) * 8);
-    @media screen and (max-width: 768px) {
-      width: 100%;
+  .members {
+    &-title {
+      margin-top: 30px;
+      margin-bottom: 50px;
     }
-    color: white;
-    flex-wrap: wrap;
+
+    &-container {
+      width: 90%;
+      max-width: calc(var(--card-width) * 4 + var(--card-margin) * 8);
+      color: white;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
   }
 `;
 
 function Members() {
   const { t } = useTranslation();
   return (
-    <Div id="members" className="column page-padding">
+    <Div id="members" className="column page-padding members">
       <motion.div
-        id="title"
-        className="page-title"
+        className="page-title members-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',
@@ -81,7 +82,7 @@ function Members() {
       >
         {t('title.members')}
       </motion.div>
-      <div id="members-container" className="row">
+      <div className="row members-container">
         {settings.members.map(({ name, image }) => (
           <Member name={t(`members.${name}`)} image={image} key={name} />
         ))}

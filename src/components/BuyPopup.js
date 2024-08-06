@@ -15,6 +15,7 @@ const Dialog = styled.dialog`
       margin-top: 20px;
     }
   }
+
   .modal {
     &-textarea {
       width: 100%;
