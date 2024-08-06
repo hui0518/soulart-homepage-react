@@ -1,18 +1,11 @@
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
-
-const Foot = styled.footer`
-  background-color: rgb(25, 25, 25);
-  .logo {
-    width: 150px;
-  }
-`;
+import './Footer.scss';
 
 function Footer() {
   const [t] = useTranslation();
 
   return (
-    <Foot className="footer footer-center text-primary-content p-10">
+    <footer className="footer footer-center text-primary-content p-10">
       <aside>
         <img className="logo" src="./assets/logo.png" alt="Soulart Logo" />
         <p className="font-bold">Soulart Startup Company since 2024</p>
@@ -22,7 +15,7 @@ function Footer() {
         <p>{t('footer.phone')}</p>
         <p>{t('footer.email')}</p>
       </aside>
-    </Foot>
+    </footer>
   );
 }
 

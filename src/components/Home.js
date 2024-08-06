@@ -1,49 +1,7 @@
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
-
-const Div = styled.div`
-  width: 100%;
-  height: 100vh;
-
-  .image {
-    width: 90vw;
-    margin-top: 20px;
-    height: calc(100vh - var(--header-height) - 40px);
-
-    border-radius: 20px;
-    display: block;
-
-    object-fit: cover;
-    transition: scale 0.6s ease-in-out;
-  }
-
-  #mainText {
-    font-size: 50px;
-    font-weight: 400;
-    font-family: var(--arvo);
-    color: white;
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -75%);
-    @media screen and (max-width: 480px) {
-      transform: translate(-50%, -50%);
-    }
-    z-index: 5;
-    white-space: pre-line;
-    opacity: 0;
-
-    transition: opacity 2s ease-in-out;
-  }
-
-  .scrolled {
-    scale: 0.8;
-  }
-`;
-
+import './Home.scss';
 function Home() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -71,7 +29,7 @@ function Home() {
   const [t] = useTranslation();
 
   return (
-    <Div
+    <div
       id="home"
       style={{ height: window.innerHeight - 100 }}
       className="column"
@@ -82,7 +40,7 @@ function Home() {
         src="./assets/home/dark_compressed.jpg"
         alt="soulart station"
       />
-    </Div>
+    </div>
   );
 }
 

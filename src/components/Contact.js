@@ -1,28 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
-
-const Dialog = styled.dialog`
-  .modal {
-    &-box {
-      height: 600px;
-      background-color: rgb(20, 20, 20);
-      border-radius: 20px;
-      border: 3px solid rgb(40, 40, 40);
-    }
-
-    &-button {
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    &-textarea {
-      width: 100%;
-      height: 200px;
-      resize: none;
-    }
-  }
-`;
+import './Contact.scss';
 
 function Contact() {
   const sendEmail = (event) => {
@@ -69,7 +47,7 @@ function Contact() {
   ];
 
   return (
-    <Dialog id="contact-modal" className="modal">
+    <dialog id="contact-modal" className="modal">
       <div className="modal-box">
         <h3 className="font-bold text-lg">{t('contact.title')}</h3>
         <p className="py-4">{t('contact.description')}.</p>
@@ -123,7 +101,7 @@ function Contact() {
       <form method="dialog" className="modal-backdrop">
         <button>close</button>
       </form>
-    </Dialog>
+    </dialog>
   );
 }
 

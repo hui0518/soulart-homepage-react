@@ -1,36 +1,12 @@
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
-
-const Div = styled.div`
-  .buy {
-    &-title {
-      margin-bottom: 40px;
-    }
-
-    &-image {
-      width: 300px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    &-button {
-      border-radius: 10px;
-      margin-top: 10px;
-      background-color: rgb(40, 40, 40);
-    }
-
-    &-description {
-      white-space: pre-wrap;
-    }
-  }
-`;
+import './Buy.scss';
 
 function Buy() {
   const [t] = useTranslation();
 
   return (
-    <Div id="buy" className="buy column page-padding">
+    <div id="buy" className="buy column page-padding">
       <motion.div
         id="title"
         className="buy-title page-title"
@@ -55,7 +31,7 @@ function Buy() {
       >
         <div>{t('buy.button')}</div>
       </motion.button>
-    </Div>
+    </div>
   );
 }
 

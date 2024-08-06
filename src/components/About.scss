@@ -1,0 +1,82 @@
+#buttons {
+  margin-top: 30px;
+}
+
+.videos {
+  &-title {
+    margin-bottom: 4px;
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+}
+
+.carousel {
+  overflow: hidden;
+  width: 70vw;
+
+  &-item {
+    padding: {
+      top: 30px;
+      bottom: 30px;
+    }
+  }
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+  line-height: 40px;
+  border-radius: 15px;
+  margin: {
+    left: 8px;
+    right: 8px;
+  }
+
+  background-color: rgb(40, 40, 40);
+  &.active {
+    background-color: grey;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &.inactive {
+      background-color: rgb(50, 50, 50);
+    }
+  }
+}
+
+.video {
+  &-text {
+    position: absolute;
+    font: {
+      size: 50px;
+      family: var(--arvo);
+    }
+    padding: {
+      left: 5px;
+      right: 5px;
+    }
+    left: 15px;
+
+    @media screen and (max-width: 800px) {
+      font-size: 16px;
+    }
+
+    &-up {
+      top: 10px;
+      @media screen and (max-width: 800px) {
+        top: -30px;
+      }
+    }
+
+    &-down {
+      bottom: 10px;
+      @media screen and (max-width: 800px) {
+        bottom: -30px;
+      }
+    }
+  }
+}

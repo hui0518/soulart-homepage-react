@@ -1,74 +1,24 @@
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import settings from '../settings';
-
-const MemberDiv = styled(motion.div)`
-  width: 200px;
-  height: 400px;
-  margin: 0 var(--card-margin);
-  background: none;
-  z-index: 1;
-
-  @media screen and (max-width: 768px) {
-    width: 40vw;
-    .member-name {
-      font-size: 17px;
-    }
-  }
-
-  .member {
-    &-image {
-      width: var(--card-width);
-      height: 300px;
-      object-fit: cover;
-      border-radius: 20px;
-      z-index: 1;
-    }
-  }
-`;
+import './Members.scss';
 
 function Member({ name, image }) {
   return (
-    <MemberDiv whileHover={{ scale: 1.05 }} className="card column member">
+    <motion.div whileHover={{ scale: 1.05 }} className="card column member">
       <img className="member-image" src={image} alt={name} />
       <div className="card-body">
         <h2 className="card-title member-name">{name}</h2>
       </div>
-    </MemberDiv>
+    </motion.div>
   );
 }
-
-const Div = styled.div`
-  --card-width: 200px;
-  --card-margin: 10px;
-
-  width: 100%;
-
-  .members {
-    &-title {
-      margin-top: 30px;
-      margin-bottom: 50px;
-    }
-
-    &-container {
-      width: 90%;
-      max-width: calc(var(--card-width) * 4 + var(--card-margin) * 8);
-      color: white;
-      flex-wrap: wrap;
-
-      @media screen and (max-width: 768px) {
-        width: 100%;
-      }
-    }
-  }
-`;
 
 function Members() {
   const { t } = useTranslation();
   return (
-    <Div id="members" className="column page-padding members">
+    <div id="members" className="column page-padding members">
       <motion.div
         className="page-title members-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
@@ -87,7 +37,7 @@ function Members() {
           <Member name={t(`members.${name}`)} image={image} key={name} />
         ))}
       </div>
-    </Div>
+    </div>
   );
 }
 

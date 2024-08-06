@@ -1,42 +1,12 @@
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
-
-const Div = styled.div`
-  background-color: rgb(30, 30, 30);
-
-  .description {
-    white-space: pre-wrap;
-
-    @media screen and (max-width: 768px) {
-      width: 85%;
-    }
-  }
-
-  #container {
-    width: 90vw;
-    margin-top: 50px;
-    margin-bottom: 20px;
-
-    * {
-      width: 45vw;
-      @media screen and (max-width: 480px) {
-        width: 40vw;
-      }
-      height: 35vw;
-      margin-left: 10px;
-      margin-right: 10px;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-  }
-`;
+import './Perf.scss';
 
 function Buy() {
   const [t] = useTranslation();
 
   return (
-    <Div id="perf" className="page-padding column">
+    <div id="perf" className="page-padding column">
       <motion.div
         id="title"
         className="page-title"
@@ -58,7 +28,7 @@ function Buy() {
       </div>
 
       <h1 className="description">{t('perf.description')}</h1>
-    </Div>
+    </div>
   );
 }
 

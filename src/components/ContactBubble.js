@@ -1,25 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
-
-const Div = styled(motion.button)`
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-
-  width: 100px;
-  height: 40px;
-  line-height: 40px;
-
-  border: 2px solid rgb(50, 50, 50);
-  border-radius: 15px;
-  background-color: rgb(40, 40, 40);
-
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-`;
+import './ContactBubble.scss';
 
 function ContactBubble() {
   const { t } = useTranslation();
@@ -36,7 +18,7 @@ function ContactBubble() {
   }, []);
 
   return (
-    <Div
+    <motion.button
       id="apply"
       className="btn"
       onClick={() => document.getElementById('contact-modal').showModal()}
@@ -44,7 +26,7 @@ function ContactBubble() {
       whileTap={{ scale: 0.9 }}
     >
       <div>{t('contact.bubble')}</div>
-    </Div>
+    </motion.button>
   );
 }
 

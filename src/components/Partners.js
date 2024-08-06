@@ -1,33 +1,11 @@
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import settings from '../settings.json';
-
-const PartnerDiv = styled(motion.div)`
-  width: 200px;
-  height: 300px;
-
-  margin: 0 var(--card-margin);
-  background: none;
-
-  @media screen and (max-width: 480px) {
-    width: 40vw;
-    .card-title {
-      font-size: 17px;
-    }
-  }
-
-  .partner-image {
-    width: var(--card-width);
-    height: 200px;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-`;
+import './Partners.scss';
 
 function Partner({ name, image }) {
   return (
-    <PartnerDiv
+    <motion.div
       whileHover={{ scale: 1.05 }}
       className="card w-96 column partner"
     >
@@ -35,39 +13,14 @@ function Partner({ name, image }) {
       <div className="card-body">
         <h2 className="card-title partner-name">{name}</h2>
       </div>
-    </PartnerDiv>
+    </motion.div>
   );
 }
-
-const Div = styled.div`
-  --card-width: 200px;
-  --card-margin: 10px;
-
-  width: 100%;
-  background-color: rgb(30, 30, 30);
-
-  .partners {
-    &-title {
-      margin-top: 30px;
-      margin-bottom: 50px;
-    }
-
-    &-container {
-      width: 90%;
-      max-width: calc(var(--card-width) * 4 + var(--card-margin) * 8);
-      flex-wrap: wrap;
-
-      @media screen and (max-width: 480px) {
-        width: 100%;
-      }
-    }
-  }
-`;
 
 function Partners() {
   const { t } = useTranslation();
   return (
-    <Div id="partners" className="column page-padding partners">
+    <div id="partners" className="column page-padding partners">
       <motion.div
         id="title"
         className="page-title partners-title"
@@ -87,7 +40,7 @@ function Partners() {
           <Partner name={t(`partners.${name}`)} image={image} key={name} />
         ))}
       </div>
-    </Div>
+    </div>
   );
 }
 

@@ -1,51 +1,9 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import classNames from 'classnames';
 
 import i18n from '../locales/i18n';
 import { useTranslation } from 'react-i18next';
-
-const Div = styled.div`
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    z-index: 10;
-    transition: all 0.4s ease-in-out;
-    height: var(--header-height);
-
-    &-logo {
-      width: 100px;
-      margin: 0 10px;
-    }
-
-    &-lang {
-      background: none;
-      border: none;
-      color: white;
-    }
-
-    &-buttons {
-      font-size: 20px;
-      font-weight: 400;
-      font-family: var(--arvo);
-      color: white;
-    }
-  }
-
-  .scrolled {
-    background: rgba(0, 0, 0, 0.28);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-  }
-
-  .dropdown-content {
-    background: rgb(20, 20, 20);
-    border-radius: 10px;
-  }
-`;
+import './Header.scss';
 
 function Header() {
   const [lang, setLang] = useState('ko');
@@ -94,7 +52,7 @@ function Header() {
   ];
 
   return (
-    <Div>
+    <div>
       <div className={classNames('navbar', { scrolled })}>
         <div className="navbar-start">
           <img
@@ -146,7 +104,7 @@ function Header() {
           </span>
         </div>
       </div>
-    </Div>
+    </div>
   );
 }
 

@@ -1,40 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
-
-const Dialog = styled.dialog`
-  .popup {
-    &-textarea {
-      width: 100%;
-      height: 200px;
-      resize: none;
-    }
-
-    &-button {
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-  }
-
-  .modal {
-    &-textarea {
-      width: 100%;
-      height: 200px;
-      resize: none;
-    }
-
-    &-button {
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    &-box {
-      height: 600px;
-      background-color: rgb(20, 20, 20);
-      border-radius: 20px;
-    }
-  }
-`;
+import './BuyPopup.scss';
 
 function BuyPopup() {
   const sendEmail = (event) => {
@@ -81,7 +47,7 @@ function BuyPopup() {
   ];
 
   return (
-    <Dialog id="buy-modal" className="modal">
+    <dialog id="buy-modal" className="modal">
       <div className="modal-box">
         <h3 className="font-bold text-lg">{t('buy.popup.title')}</h3>
         <p className="py-4">{t('buy.popup.description')}.</p>
@@ -135,7 +101,7 @@ function BuyPopup() {
       <form method="dialog" className="modal-backdrop">
         <button>close</button>
       </form>
-    </Dialog>
+    </dialog>
   );
 }
 

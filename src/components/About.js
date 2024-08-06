@@ -1,86 +1,9 @@
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import settings from '../settings.json';
-
-const Div = styled.div`
-  #buttons {
-    margin-top: 30px;
-  }
-
-  .videos {
-    &-title {
-      margin-bottom: 4px;
-    }
-
-    &-wrapper {
-      position: relative;
-    }
-  }
-
-  .carousel {
-    overflow: hidden;
-    width: 70vw;
-
-    &-item {
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-  }
-
-  .button {
-    width: 30px;
-    height: 30px;
-    line-height: 40px;
-    border-radius: 15px;
-    margin-left: 8px;
-    margin-right: 8px;
-    background-color: rgb(40, 40, 40);
-
-    &.active {
-      background-color: grey;
-    }
-
-    &:hover {
-      cursor: pointer;
-
-      &.inactive {
-        background-color: rgb(50, 50, 50);
-      }
-    }
-  }
-
-  .video {
-    &-text {
-      position: absolute;
-      font-size: 50px;
-      font-family: var(--arvo);
-      padding-left: 5px;
-      padding-right: 5px;
-      left: 15px;
-
-      @media screen and (max-width: 800px) {
-        font-size: 16px;
-      }
-
-      &-up {
-        top: 10px;
-        @media screen and (max-width: 800px) {
-          top: -30px;
-        }
-      }
-
-      &-down {
-        bottom: 10px;
-        @media screen and (max-width: 800px) {
-          bottom: -30px;
-        }
-      }
-    }
-  }
-`;
+import './About.scss';
 
 function About() {
   const width = '70vw';
@@ -130,7 +53,7 @@ function About() {
   const [t] = useTranslation();
 
   return (
-    <Div id="about" className="videos column page-padding">
+    <div id="about" className="videos column page-padding">
       <motion.div
         className="videos-title page-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
@@ -189,7 +112,7 @@ function About() {
           />
         ))}
       </div>
-    </Div>
+    </div>
   );
 }
 
