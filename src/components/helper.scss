@@ -1,3 +1,8 @@
+$arvo: Arvo, 'Noto Sans KR', sans-serif;
+$sans: 'Noto Sans KR', sans-serif;
+$josefin: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+$header-height: 64px;
+
 @mixin mobile {
   @media screen and (max-width: 768px) {
     @content;
@@ -8,4 +13,18 @@
   @media screen and (max-width: 1024px) {
     @content;
   }
+}
+
+@mixin row {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin col {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }

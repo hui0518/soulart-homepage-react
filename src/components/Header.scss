@@ -8,7 +8,7 @@
   width: 100vw;
   z-index: 10;
   transition: all 0.4s ease-in-out;
-  height: var(--header-height);
+  height: $header-height;
 
   &-logo {
     width: 100px;
@@ -24,15 +24,15 @@
   &-buttons {
     font-size: 20px;
     font-weight: 400;
-    font-family: var(--arvo);
+    font-family: $arvo;
     color: white;
   }
-}
 
-.scrolled-header {
-  background: rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  &-scrolled {
+    background: rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
 }
 
 .dropdown-content {

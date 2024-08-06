@@ -53,9 +53,9 @@ function About() {
   const [t] = useTranslation();
 
   return (
-    <div id="about" className="videos column page-padding">
+    <div id="about" className="column page-padding about">
       <motion.div
-        className="videos-title page-title"
+        className="page-title about-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',
@@ -67,16 +67,19 @@ function About() {
       >
         {t('title.about')}
       </motion.div>
-      <div className="description" style={{ whiteSpace: 'pre-wrap' }}>
+      <div className="about-description" style={{ whiteSpace: 'pre-wrap' }}>
         {t('about.description')}
       </div>
 
-      <div id="carousel" className="carousel carousel-center space-x-4 p-4">
+      <div
+        id="carousel"
+        className="carousel carousel-center space-x-4 p-4 about-carousel"
+      >
         <div className="carousel-item" style={{ width: half }}></div>
 
         {settings.videos.map(({ id, image, up, down }) => (
           <div key={id} className="carousel-item">
-            <div className="videos-wrapper">
+            <div className="about-wrapper">
               <video
                 id={id}
                 className="rounded-box"
@@ -98,7 +101,7 @@ function About() {
         <div className="carousel-item" style={{ width: half }}></div>
       </div>
 
-      <div id="buttons" className="row">
+      <div id="buttons" className="row about-buttons">
         {[1, 2, 3].map((i) => (
           <motion.div
             key={i}

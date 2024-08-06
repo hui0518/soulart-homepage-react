@@ -32,11 +32,15 @@ function Home() {
     <div
       id="home"
       style={{ height: window.innerHeight - 100 }}
-      className="column"
+      className="column home"
     >
-      <div id="mainText">{t('slogan')}</div>
+      <div id="mainText" className="home-text">
+        {t('slogan')}
+      </div>
       <img
-        className={classNames('image', { scrolled })}
+        className={classNames('home-image', {
+          'home-scrolled': scrolled,
+        })}
         src="./assets/home/dark_compressed.jpg"
         alt="soulart station"
       />

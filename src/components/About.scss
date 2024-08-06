@@ -1,28 +1,28 @@
 @import './helper.scss';
 
-#buttons {
-  margin-top: 30px;
-}
+.about {
+  &-carousel {
+    overflow: hidden;
+    width: 70vw;
 
-.videos {
+    &-item {
+      padding: {
+        top: 30px;
+        bottom: 30px;
+      }
+    }
+  }
+
+  &-buttons {
+    margin-top: 30px;
+  }
+
   &-title {
     margin-bottom: 4px;
   }
 
   &-wrapper {
     position: relative;
-  }
-}
-
-.carousel {
-  overflow: hidden;
-  width: 70vw;
-
-  &-item {
-    padding: {
-      top: 30px;
-      bottom: 30px;
-    }
   }
 }
 
@@ -55,7 +55,7 @@
     position: absolute;
     font: {
       size: 50px;
-      family: var(--arvo);
+      family: $arvo;
     }
     padding: {
       left: 5px;
@@ -63,20 +63,20 @@
     }
     left: 15px;
 
-    @media screen and (max-width: 800px) {
+    @include mobile {
       font-size: 16px;
     }
 
     &-up {
       top: 10px;
-      @media screen and (max-width: 800px) {
+      @include mobile {
         top: -30px;
       }
     }
 
     &-down {
       bottom: 10px;
-      @media screen and (max-width: 800px) {
+      @include mobile {
         bottom: -30px;
       }
     }
