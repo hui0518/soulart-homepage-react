@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import settings from '../settings.json';
 import './About.scss';
 
 function About() {
@@ -11,46 +10,24 @@ function About() {
 
   const [cur, setCur] = useState(0);
 
-  useEffect(() => {
-    const buttons = ['button1', 'button2', 'button3'].map((b) =>
-      document.getElementById(b)
-    );
-    const elems = ['card1', 'card2', 'card3'].map((id) =>
-      document.getElementById(id)
-    );
+  const move = (i) => {
     const carousel = document.getElementById('carousel');
-    const width = document.getElementById('card1');
-
-    let now = 0;
-    let setNow = (i) => {
-      now = i;
-      setCur(i);
-    };
-
-    const moveTo = (i) => {
-      setNow(i);
-      elems[i].currentTime = 0;
-      elems[i].play();
-      carousel.scrollTo({
-        left: width.clientWidth * (i + 0.5),
-        behavior: 'smooth',
-      });
-    };
-
-    moveTo(0);
-
-    for (let i = 0; i < 3; i++) {
-      buttons[i].addEventListener('click', () => moveTo(i));
-
-      elems[i].addEventListener('ended', () => {
-        if (now === i) {
-          moveTo((i + 1) % elems.length);
-        }
-      });
-    }
-  }, []);
+    setCur(i);
+    const a = document.getElementById(`card${i + 1}`);
+    const w = a.clientWidth;
+    a.currentTime = 0;
+    a.play();
+    carousel.scrollTo({
+      left: w * (i + 0.5),
+      behavior: 'smooth',
+    });
+  };
 
   const [t] = useTranslation();
+
+  useEffect(() => {
+    move(0);
+  }, []);
 
   return (
     <div id="about" className="about">
@@ -77,43 +54,118 @@ function About() {
       >
         <div className="carousel-item" style={{ width: half }}></div>
 
-        {settings.videos.map(({ id, image, up, down }) => (
-          <div key={id} className="carousel-item">
-            <div className="video">
-              <video
-                id={id}
-                className="rounded-box"
-                src={image}
-                muted
-                playsInline
-                style={{
-                  width,
-                }}
-              />
-              <div className="left-up video-text video-text-up">{t(up)}</div>
-              <div className="left-down video-text video-text-down">
-                {t(down)}
-              </div>
+        <div className="carousel-item">
+          <div className="video">
+            <video
+              id="card1"
+              className="rounded-box"
+              src="./assets/about/1.mp4"
+              muted
+              playsInline
+              style={{
+                width,
+              }}
+              onEnded={() => {
+                if (cur === 0) {
+                  move(1);
+                }
+              }}
+            />
+            <div className="left-up video-text video-text-up">
+              {t('about.leftup1')}
+            </div>
+            <div className="left-down video-text video-text-down">
+              {t('about.leftdown1')}
             </div>
           </div>
-        ))}
+        </div>
+
+        <div className="carousel-item">
+          <div className="video">
+            <video
+              id="card2"
+              className="rounded-box"
+              src="./assets/about/2.mp4"
+              muted
+              playsInline
+              style={{
+                width,
+              }}
+              onEnded={() => {
+                if (cur === 1) {
+                  move(2);
+                }
+              }}
+            />
+            <div className="left-up video-text video-text-up">
+              {t('about.leftup2')}
+            </div>
+            <div className="left-down video-text video-text-down">
+              {t('about.leftdown2')}
+            </div>
+          </div>
+        </div>
+
+        <div className="carousel-item">
+          <div className="video">
+            <video
+              id="card3"
+              className="rounded-box"
+              src="./assets/about/3.mp4"
+              muted
+              playsInline
+              style={{
+                width,
+              }}
+              onEnded={() => {
+                if (cur === 2) {
+                  move(0);
+                }
+              }}
+            />
+            <div className="left-up video-text video-text-up">
+              {t('about.leftup3')}
+            </div>
+            <div className="left-down video-text video-text-down">
+              {t('about.leftdown3')}
+            </div>
+          </div>
+        </div>
 
         <div className="carousel-item" style={{ width: half }}></div>
       </div>
 
       <div id="buttons" className="about-buttons">
-        {[1, 2, 3].map((i) => (
-          <motion.div
-            key={i}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            id={`button${i}`}
-            className={classNames('button', {
-              active: cur === i - 1,
-              inactive: cur !== i - 1,
-            })}
-          />
-        ))}
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          id={`button1`}
+          className={classNames('button', {
+            active: cur === 0,
+            inactive: cur !== 0,
+          })}
+          onClick={() => move(0)}
+        />
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          id={`button2`}
+          className={classNames('button', {
+            active: cur === 1,
+            inactive: cur !== 1,
+          })}
+          onClick={() => move(1)}
+        />
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          id={`button3`}
+          className={classNames('button', {
+            active: cur === 2,
+            inactive: cur !== 2,
+          })}
+          onClick={() => move(2)}
+        />
       </div>
     </div>
   );

@@ -69,18 +69,21 @@
   ],
   "videos": [
     {
+      "i": 0,
       "id": "card1",
       "image": "./assets/about/1.mp4",
       "up": "about.leftup1",
       "down": "about.leftdown1"
     },
     {
+      "i": 1,
       "id": "card2",
       "image": "./assets/about/2.mp4",
       "up": "about.leftup2",
       "down": "about.leftdown2"
     },
     {
+      "i": 2,
       "id": "card3",
       "image": "./assets/about/3.mp4",
       "up": "about.leftup3",
