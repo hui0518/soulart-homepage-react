@@ -79,7 +79,7 @@ function About() {
 
         {settings.videos.map(({ id, image, up, down }) => (
           <div key={id} className="carousel-item">
-            <div className="about-wrapper">
+            <div className="video">
               <video
                 id={id}
                 className="rounded-box"
