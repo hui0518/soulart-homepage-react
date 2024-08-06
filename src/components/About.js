@@ -15,10 +15,11 @@ function About() {
     const buttons = ['button1', 'button2', 'button3'].map((b) =>
       document.getElementById(b)
     );
-
     const elems = ['card1', 'card2', 'card3'].map((id) =>
       document.getElementById(id)
     );
+    const carousel = document.getElementById('carousel');
+    const width = document.getElementById('card1').clientWidth;
 
     let now = 0;
     let setNow = (i) => {
@@ -30,8 +31,6 @@ function About() {
       setNow(i);
       elems[i].currentTime = 0;
       elems[i].play();
-      const carousel = document.getElementById('carousel');
-      const width = document.getElementById('card1').clientWidth;
       carousel.scrollTo({ left: width * (i + 0.5), behavior: 'smooth' });
     };
 
@@ -39,9 +38,7 @@ function About() {
 
     for (let i = 0; i < 3; i++) {
       buttons[i].addEventListener('click', () => moveTo(i));
-    }
 
-    for (let i = 0; i < 3; i++) {
       elems[i].addEventListener('ended', () => {
         if (now === i) {
           moveTo((i + 1) % elems.length);
@@ -89,7 +86,7 @@ function About() {
                 style={{
                   width,
                 }}
-              ></video>
+              />
               <div className="left-up video-text video-text-up">{t(up)}</div>
               <div className="left-down video-text video-text-down">
                 {t(down)}
