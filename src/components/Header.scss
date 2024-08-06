@@ -5,10 +5,9 @@
   top: 0;
   left: 0;
   right: 0;
-  width: 100vw;
+  @include size(100vw, $header-height);
   z-index: 10;
   transition: all 0.4s ease-in-out;
-  height: $header-height;
 
   &-logo {
     width: 100px;

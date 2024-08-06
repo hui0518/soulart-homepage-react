@@ -14,8 +14,7 @@ $card-margin: 10px;
   z-index: 1;
 
   &-image {
-    width: $card-width;
-    height: 300px;
+    @include size($card-width, 300px);
     object-fit: cover;
     border-radius: 20px;
     z-index: 1;

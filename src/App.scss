@@ -5,8 +5,7 @@
 
 .App {
   text-align: center;
-  padding-top: 64px;
-  font-family: $sans;
+  padding-top: $header-height;
 
   -webkit-user-select: none;
   -moz-user-select: none;

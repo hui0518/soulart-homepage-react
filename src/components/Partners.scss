@@ -5,8 +5,7 @@ $card-margin: 10px;
 
 .partner {
   @include col;
-  width: 200px;
-  height: 300px;
+  @include size(200px, 300px);
 
   margin: 0 $card-margin;
   background: none;

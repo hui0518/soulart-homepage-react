@@ -2,13 +2,11 @@
 
 .home {
   @include col;
-  width: 100%;
-  height: 100vh;
+  @include size(100%, 100vh);
 
   &-image {
-    width: 90vw;
+    @include size(90vw, calc(100vh - $header-height - 40px));
     margin-top: 20px;
-    height: calc(100vh - $header-height - 40px);
 
     border-radius: 20px;
     display: block;

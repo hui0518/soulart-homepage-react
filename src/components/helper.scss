@@ -61,3 +61,8 @@ $header-height: 64px;
     }
   }
 }
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
