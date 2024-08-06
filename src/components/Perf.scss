@@ -6,10 +6,7 @@
 
   &-description {
     white-space: pre-wrap;
-
-    @include mobile {
-      width: 85%;
-    }
+    @include res(width, 100%, 85%);
   }
 
   &-container {
@@ -21,10 +18,7 @@
     }
 
     * {
-      width: 45vw;
-      @include mobile {
-        width: 40vw;
-      }
+      @include res(width, 45vw, 40vw);
       height: 35vw;
       margin: {
         left: 10px;

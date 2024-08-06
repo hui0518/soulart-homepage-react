@@ -40,12 +40,8 @@ $card-margin: 10px;
 
   &-container {
     @include row;
-    width: 90%;
+    @include res(width, 90%, 100%);
     max-width: calc($card-width * 4 + $card-margin * 8);
     flex-wrap: wrap;
-
-    @include mobile {
-      width: 100%;
-    }
   }
 }

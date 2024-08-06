@@ -5,7 +5,9 @@ $card-margin: 10px;
 
 .member {
   @include col;
-  width: 200px;
+  @include res(width, 200px, 40vw);
+  @include res(font-size, 20px, 17px);
+
   height: 400px;
   margin: 0 $card-margin;
   background: none;
@@ -17,13 +19,6 @@ $card-margin: 10px;
     object-fit: cover;
     border-radius: 20px;
     z-index: 1;
-  }
-
-  @include mobile {
-    width: 40vw;
-    .member-name {
-      font-size: 17px;
-    }
   }
 }
 
@@ -40,13 +35,10 @@ $card-margin: 10px;
 
   &-container {
     @include row;
-    width: 90%;
+    @include res(width, 90%, 100%);
+
     max-width: calc($card-width * 4 + $card-margin * 8);
     color: white;
     flex-wrap: wrap;
-
-    @include mobile {
-      width: 100%;
-    }
   }
 }

@@ -15,6 +15,14 @@ $header-height: 64px;
   }
 }
 
+@mixin res($property, $desktop, $mobile) {
+  #{$property}: $desktop;
+
+  @include mobile {
+    #{$property}: $mobile;
+  }
+}
+
 @mixin row {
   display: flex;
   flex-flow: row;

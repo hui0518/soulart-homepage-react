@@ -54,33 +54,20 @@
 
 .video {
   &-text {
+    @include res(font-size, 45px, 16px);
     position: absolute;
-    font: {
-      size: 50px;
-      family: $arvo;
-    }
+    font-family: $arvo;
     padding: {
       left: 5px;
       right: 5px;
     }
     left: 15px;
 
-    @include mobile {
-      font-size: 16px;
-    }
-
     &-up {
-      top: 10px;
-      @include mobile {
-        top: -30px;
-      }
+      @include res(top, 10px, -30px);
     }
-
     &-down {
-      bottom: 10px;
-      @include mobile {
-        bottom: -30px;
-      }
+      @include res(bottom, 10px, -30px);
     }
   }
 }
