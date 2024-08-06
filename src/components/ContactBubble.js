@@ -5,8 +5,8 @@ import styled from 'styled-components';
 
 const Div = styled(motion.button)`
   position: fixed;
-  left: 100vw;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
 
   width: 100px;
   height: 40px;
@@ -16,7 +16,6 @@ const Div = styled(motion.button)`
   border-radius: 15px;
   background-color: rgb(40, 40, 40);
 
-  transform: translate(-120px, -20px);
   z-index: 10;
   opacity: 0;
   transition: opacity 1s ease-in-out;
