@@ -12,8 +12,13 @@ const MemberDiv = styled(motion.div)`
   background: none;
   z-index: 1;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     width: 40vw;
+    font-size: 15px;
+
+    .card-title {
+      font-size: 17px;
+    }
   }
 
   .member-image {
@@ -50,7 +55,7 @@ const Div = styled.div`
   #members-container {
     width: 90%;
     max-width: calc(var(--card-width) * 4 + var(--card-margin) * 8);
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
     }
     color: white;

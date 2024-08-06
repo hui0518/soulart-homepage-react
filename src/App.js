@@ -14,6 +14,9 @@ import BuyPopup from './components/BuyPopup';
 import styled from 'styled-components';
 
 // declare css variables here
+// mobile <= 768px;
+// 768px < tablet <= 1024px;
+// 1024px < desktop
 const Div = styled.div`
   --arvo: Arvo, 'Noto Sans KR', sans-serif;
   --sans: 'Noto Sans KR', sans-serif;
@@ -25,9 +28,7 @@ function App() {
   return (
     <Div className="App">
       <Contact />
-
       <ContactBubble />
-
       <BuyPopup />
 
       <Header />
@@ -35,13 +36,9 @@ function App() {
       <Home />
 
       <About />
-
       <Perf />
-
       <Members />
-
       <Partners />
-
       <Buy />
 
       <Footer />
