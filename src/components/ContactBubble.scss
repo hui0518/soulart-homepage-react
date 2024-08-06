@@ -5,7 +5,7 @@
   right: 10px;
   bottom: 10px;
 
-  @include mixin(100px, 40px);
+  @include size(100px, 40px);
   line-height: 40px;
 
   border: 2px solid rgb(50, 50, 50);
