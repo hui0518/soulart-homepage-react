@@ -46,7 +46,7 @@ const Div = styled.div`
   width: 100%;
   background-color: rgb(30, 30, 30);
 
-  .partner {
+  .partners {
     &-title {
       margin-top: 30px;
       margin-bottom: 50px;
