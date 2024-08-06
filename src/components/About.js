@@ -19,7 +19,7 @@ function About() {
       document.getElementById(id)
     );
     const carousel = document.getElementById('carousel');
-    const width = document.getElementById('card1').clientWidth;
+    const width = document.getElementById('card1');
 
     let now = 0;
     let setNow = (i) => {
@@ -31,7 +31,10 @@ function About() {
       setNow(i);
       elems[i].currentTime = 0;
       elems[i].play();
-      carousel.scrollTo({ left: width * (i + 0.5), behavior: 'smooth' });
+      carousel.scrollTo({
+        left: width.clientWidth * (i + 0.5),
+        behavior: 'smooth',
+      });
     };
 
     moveTo(0);
