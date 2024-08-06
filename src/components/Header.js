@@ -53,7 +53,7 @@ function Header() {
 
   return (
     <div>
-      <div className={classNames('navbar', { scrolled })}>
+      <div className={classNames('navbar', { 'scrolled-header': scrolled })}>
         <div className="navbar-start">
           <img
             className="navbar-logo"
