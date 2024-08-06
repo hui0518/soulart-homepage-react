@@ -6,7 +6,7 @@ function Buy() {
   const [t] = useTranslation();
 
   return (
-    <div id="buy" className="buy column page-padding">
+    <div id="buy" className="buy page-padding">
       <motion.div
         id="title"
         className="buy-title page-title"

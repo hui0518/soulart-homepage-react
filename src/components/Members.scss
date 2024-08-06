@@ -4,6 +4,7 @@ $card-width: 200px;
 $card-margin: 10px;
 
 .member {
+  @include col;
   width: 200px;
   height: 400px;
   margin: 0 $card-margin;
@@ -27,6 +28,7 @@ $card-margin: 10px;
 }
 
 .members {
+  @include col;
   width: 100%;
 
   &-title {
@@ -37,6 +39,7 @@ $card-margin: 10px;
   }
 
   &-container {
+    @include row;
     width: 90%;
     max-width: calc($card-width * 4 + $card-margin * 8);
     color: white;

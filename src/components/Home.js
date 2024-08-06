@@ -32,7 +32,7 @@ function Home() {
     <div
       id="home"
       style={{ height: window.innerHeight - 100 }}
-      className="column home"
+      className="home"
     >
       <div id="mainText" className="home-text">
         {t('slogan')}

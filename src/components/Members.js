@@ -6,7 +6,7 @@ import './Members.scss';
 
 function Member({ name, image }) {
   return (
-    <motion.div whileHover={{ scale: 1.05 }} className="card column member">
+    <motion.div whileHover={{ scale: 1.05 }} className="card member">
       <img className="member-image" src={image} alt={name} />
       <div className="card-body">
         <h2 className="card-title member-name">{name}</h2>
@@ -18,7 +18,7 @@ function Member({ name, image }) {
 function Members() {
   const { t } = useTranslation();
   return (
-    <div id="members" className="column page-padding members">
+    <div id="members" className="page-padding members">
       <motion.div
         className="page-title members-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
@@ -32,7 +32,7 @@ function Members() {
       >
         {t('title.members')}
       </motion.div>
-      <div className="row members-container">
+      <div className="members-container">
         {settings.members.map(({ name, image }) => (
           <Member name={t(`members.${name}`)} image={image} key={name} />
         ))}

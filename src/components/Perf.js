@@ -6,7 +6,7 @@ function Buy() {
   const [t] = useTranslation();
 
   return (
-    <div id="perf" className="page-padding column perf">
+    <div id="perf" className="page-padding perf">
       <motion.div
         id="title"
         className="page-title perf-title"
@@ -22,7 +22,7 @@ function Buy() {
         {t('title.perf')}
       </motion.div>
 
-      <div id="container" className="row perf-container">
+      <div id="container" className="perf-container">
         <img src="./assets/perf/perf1.png" alt="Performance" />
         <video src="./assets/perf/perf2.webm" muted autoPlay loop playsInline />
       </div>

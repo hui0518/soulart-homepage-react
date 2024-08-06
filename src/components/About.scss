@@ -1,6 +1,7 @@
 @import './helper.scss';
 
 .about {
+  @include col;
   &-carousel {
     overflow: hidden;
     width: 70vw;
@@ -27,6 +28,7 @@
 }
 
 .button {
+  @include row;
   width: 30px;
   height: 30px;
   line-height: 40px;

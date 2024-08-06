@@ -53,7 +53,7 @@ function About() {
   const [t] = useTranslation();
 
   return (
-    <div id="about" className="column page-padding about">
+    <div id="about" className="page-padding about">
       <motion.div
         className="page-title about-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
@@ -101,7 +101,7 @@ function About() {
         <div className="carousel-item" style={{ width: half }}></div>
       </div>
 
-      <div id="buttons" className="row about-buttons">
+      <div id="buttons" className="about-buttons">
         {[1, 2, 3].map((i) => (
           <motion.div
             key={i}

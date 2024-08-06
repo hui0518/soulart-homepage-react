@@ -5,10 +5,7 @@ import './Partners.scss';
 
 function Partner({ name, image }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="card w-96 column partner"
-    >
+    <motion.div whileHover={{ scale: 1.05 }} className="card w-96 partner">
       <img className="partner-image" src={image} alt={name} />
       <div className="card-body">
         <h2 className="card-title partner-name">{name}</h2>
@@ -20,7 +17,7 @@ function Partner({ name, image }) {
 function Partners() {
   const { t } = useTranslation();
   return (
-    <div id="partners" className="column page-padding partners">
+    <div id="partners" className="page-padding partners">
       <motion.div
         id="title"
         className="page-title partners-title"
@@ -35,7 +32,7 @@ function Partners() {
       >
         {t('title.partners')}
       </motion.div>
-      <div id="partners-container" className="row partners-container">
+      <div id="partners-container" className="partners-container">
         {settings.partners.map(({ name, image }) => (
           <Partner name={t(`partners.${name}`)} image={image} key={name} />
         ))}

@@ -1,6 +1,7 @@
 @import './helper.scss';
 
 .buy {
+  @include col;
   &-title {
     margin-bottom: 40px;
   }

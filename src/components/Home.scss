@@ -1,6 +1,7 @@
 @import './helper.scss';
 
 .home {
+  @include col;
   width: 100%;
   height: 100vh;
 
