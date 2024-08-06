@@ -17,10 +17,10 @@ function Partner({ name, image }) {
 function Partners() {
   const { t } = useTranslation();
   return (
-    <div id="partners" className="page-padding partners">
+    <div id="partners" className="partners">
       <motion.div
         id="title"
-        className="page-title partners-title"
+        className="partners-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',

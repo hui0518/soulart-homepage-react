@@ -24,9 +24,11 @@ $card-margin: 10px;
 
 .members {
   @include col;
+  @include page-padding;
   width: 100%;
 
   &-title {
+    @include page-title;
     margin: {
       top: 30px;
       bottom: 50px;

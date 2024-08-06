@@ -2,6 +2,7 @@
 
 .about {
   @include col;
+  @include page-padding;
   &-carousel {
     overflow: hidden;
     width: 70vw;
@@ -19,6 +20,7 @@
   }
 
   &-title {
+    @include page-title;
     margin-bottom: 4px;
   }
 

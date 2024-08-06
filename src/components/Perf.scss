@@ -2,7 +2,13 @@
 
 .perf {
   @include col;
+  @include page-padding;
+
   background-color: rgb(30, 30, 30);
+
+  &-title {
+    @include page-title;
+  }
 
   &-description {
     white-space: pre-wrap;

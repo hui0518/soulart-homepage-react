@@ -2,7 +2,9 @@
 
 .buy {
   @include col;
+  @include page-padding;
   &-title {
+    @include page-title;
     margin-bottom: 40px;
   }
 

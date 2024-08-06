@@ -6,10 +6,10 @@ function Buy() {
   const [t] = useTranslation();
 
   return (
-    <div id="perf" className="page-padding perf">
+    <div id="perf" className="perf">
       <motion.div
         id="title"
-        className="page-title perf-title"
+        className="perf-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',

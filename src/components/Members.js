@@ -18,9 +18,9 @@ function Member({ name, image }) {
 function Members() {
   const { t } = useTranslation();
   return (
-    <div id="members" className="page-padding members">
+    <div id="members" className="members">
       <motion.div
-        className="page-title members-title"
+        className="members-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',

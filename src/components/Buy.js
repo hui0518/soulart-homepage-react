@@ -6,10 +6,10 @@ function Buy() {
   const [t] = useTranslation();
 
   return (
-    <div id="buy" className="buy page-padding">
+    <div id="buy" className="buy">
       <motion.div
         id="title"
-        className="buy-title page-title"
+        className="buy-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         whileInView={{ transform: 'translate(0, 0)', opacity: 1 }}
         transition={{

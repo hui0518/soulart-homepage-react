@@ -53,9 +53,9 @@ function About() {
   const [t] = useTranslation();
 
   return (
-    <div id="about" className="page-padding about">
+    <div id="about" className="about">
       <motion.div
-        className="page-title about-title"
+        className="about-title"
         initial={{ transform: 'translate(0, 50%)', opacity: 0 }}
         transition={{
           ease: 'easeInOut',
